@@ -1,0 +1,34 @@
+﻿#more-arrows {
+    width: 75px;
+    height: 65px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+    #more-arrows:hover polygon {
+        fill: #fff;
+        transition: all 0.2s ease-out;
+    }
+
+        #more-arrows:hover polygon.arrow-bottom {
+            transform: translateY(-18px);
+        }
+
+        #more-arrows:hover polygon.arrow-top {
+            transform: translateY(18px);
+        }
+
+polygon {
+    fill: #fff;
+    transition: all 0.2s ease-out;
+}
+
+    polygon.arrow-middle {
+        opacity: 0.75;
+    }
+
+    polygon.arrow-top {
+        opacity: 0.5;
+    }
