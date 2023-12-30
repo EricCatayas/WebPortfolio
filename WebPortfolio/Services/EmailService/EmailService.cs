@@ -30,8 +30,8 @@ namespace WebPortfolio.Services.EmailService
                 {
                     // Setup 2-Step Verification to be turned on in myaccount.google
                     // Generate App Password in myaccount.google : use that password
+                    // Ref: https://www.youtube.com/watch?v=lk5dhDzfzsU&t=156s
 
-                    // A NotSupportedException is thrown if failed
                     smtp.Connect(_config["EmailHost"], 587, SecureSocketOptions.StartTls);
 
                     smtp.Authenticate(_config["UserEmail"], _config["EMAILSERVICE_APPPASSWORD"]);
