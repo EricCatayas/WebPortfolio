@@ -6,13 +6,12 @@ builder.Services.AddScoped<IEmailService,EmailService>();
 builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
-/* TODO  Horraay! 90% Complete!
- *     So.. tell me more about your projects? Back-end Tools section
- *     Personal Picture for About section
- *     Ericjay trans -> Logo
- *     Portfolio.pdf
- *     Contacts Management Finish Product Picture + Stocks Demo
- *     Tropical Campgrounds picture as well
+/* TODO 
+ *     EmailService resume: 2-Step Verification 
+ *     FarmEcommerce Slider + Links
+ *     VirtuBooks (Preliminary) Slider + Links
+ *     Dastru Project: ReadMe
+ *     
  */
 app.UseStaticFiles();
 app.UseRouting();
