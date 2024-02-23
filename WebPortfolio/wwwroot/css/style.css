@@ -757,6 +757,7 @@ input::-ms-input-placeholder {
 	background: rgba(0,0,0, .55);
 }
 .mixi_portfolio_overlay .overflow_hover_text{
+    color: azure;
     position: absolute;
     top: 10%;
     left: 10%;
@@ -766,7 +767,7 @@ input::-ms-input-placeholder {
     padding: 90px 0px 0px 0px;
 }
 .mixi_portfolio_overlay .overflow_hover_text i{
-    color:#fff;
+    color:azure;
     font-size: 0.875rem;
     width:35px;
     height: 35px;
