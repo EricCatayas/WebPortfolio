@@ -75,18 +75,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 ">
-                        @*<div class="main_home_slider text-center">*@
-                            <div class="single_home_slider">
-                                <div class="main_home wow fadeInUp" data-wow-duration="700ms">
-                                    <h1>Eric Jay Catayas</h1>
-                                    <p class="subtitle">Aspiring Web Developer</p>
-
-                                    @*<div class="home_btn">
-                                        <a href="" class="btn btn-md">Learn More</a>
-                                    </div>*@                                    
-                                </div>
-                            </div>                            
-                        @*</div>*@
+                        <div class="single_home_slider">
+                            <div class="main_home wow fadeInUp" data-wow-duration="700ms">
+                                <h1>Eric Jay Catayas</h1>
+                                <p class="subtitle">Aspiring Web Developer</p>                                
+                            </div>
+                        </div>    
                     </div>
                 </div>
             </div>
@@ -104,14 +98,13 @@
             <div class="row">
                 <div class="main_service_area sections">
                     <div class="col-sm-6">
-                        <div class="signle_service_left">
+                        <div class="single_service_left">
                             <h2>
                                 Frameworks &
                                 Tools
                             </h2>
                         </div>
                     </div>
-                    <!-- TODO: Add ReactJS, or total up to 6 -->
                     <div class="col-sm-6">
                         <div class="single_service_right">
                             <div class="single_service">
@@ -119,7 +112,7 @@
                                     <img src="~/images/React.png"/>
                                 </div>
                                 <div class="single_service_content">
-                                    <h3>ReactJS</h3>
+                                    <h3>React</h3>
                                 </div>
                             </div>
                             <div class="single_service">
@@ -128,14 +121,6 @@
                                 </div>
                                 <div class="single_service_content">
                                     <h3>ASP .NET Core</h3>
-                                </div>
-                            </div>
-                            <div class="single_service">
-                                <div class="single_service_icon">
-                                    <img src="~/images/ASPNET.png"/>
-                                </div>
-                                <div class="single_service_content">
-                                    <h3>Entity Framework Core</h3>
                                 </div>
                             </div>
                             <div class="single_service">
@@ -166,111 +151,115 @@
             <h2>My Projects</h2>
             <h6>Click or hover to view description and links</h6>
         </div>
-        <div class="row">
-            <div class="carousel">
-                <ul class="slides">
-                    <input type="radio" name="radio-buttons" id="img-1" checked />
-                    <li class="slide-container">
-                        <div class="slide-image">
-                            <img src="~/images/contacts_management_home.png">
+
+        @*TODO: Remove white space in left*@
+        <div class="container">
+            <div class="col-xs-12">
+                <div class="carousel single_mixi_portfolio">
+                    <ul class="slides">
+                        <input type="radio" name="radio-buttons" id="img-1" checked />
+                        <li class="slide-container">
+                            <div class="slide-image">
+                                <img src="~/images/contacts_management_home.png">
+                            </div>
+                            <div class="carousel-controls">
+                                <label for="img-5" class="prev-slide">
+                                    <span>&lsaquo;</span>
+                                </label>
+                                <label for="img-2" class="next-slide">
+                                    <span>&rsaquo;</span>
+                                </label>
+                            </div>
+                        </li>
+                        <input type="radio" name="radio-buttons" id="img-2" />
+                        <li class="slide-container">
+                            <div class="slide-image">
+                                <img src="~/images/contacts_management_persons_index2.png">
+                            </div>
+                            <div class="carousel-controls">
+                                <label for="img-1" class="prev-slide">
+                                    <span>&lsaquo;</span>
+                                </label>
+                                <label for="img-3" class="next-slide">
+                                    <span>&rsaquo;</span>
+                                </label>
+                            </div>
+                        </li>
+                        <input type="radio" name="radio-buttons" id="img-3" />
+                        <li class="slide-container">
+                            <div class="slide-image">
+                                <img src="~/images/contacts_management_persons_edit.png">
+                            </div>
+                            <div class="carousel-controls">
+                                <label for="img-2" class="prev-slide">
+                                    <span>&lsaquo;</span>
+                                </label>
+                                <label for="img-4" class="next-slide">
+                                    <span>&rsaquo;</span>
+                                </label>
+                            </div>
+                        </li>
+                        <input type="radio" name="radio-buttons" id="img-4" />
+                        <li class="slide-container">
+                            <div class="slide-image">
+                                <img src="~/images/contacts_management_events_index.png">
+                            </div>
+                            <div class="carousel-controls">
+                                <label for="img-3" class="prev-slide">
+                                    <span>&lsaquo;</span>
+                                </label>
+                                <label for="img-5" class="next-slide">
+                                    <span>&rsaquo;</span>
+                                </label>
+                            </div>
+                        </li>
+                        <input type="radio" name="radio-buttons" id="img-5" />
+                        <li class="slide-container">
+                            <div class="slide-image">
+                                <img src="~/images/contacts_management_logs_index.png">
+                            </div>
+                            <div class="carousel-controls">
+                                <label for="img-4" class="prev-slide">
+                                    <span>&lsaquo;</span>
+                                </label>
+                                <label for="img-1" class="next-slide">
+                                    <span>&rsaquo;</span>
+                                </label>
+                            </div>
+                        </li>
+                        <div class="carousel-dots">
+                            <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+                            <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+                            <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+                            <label for="img-4" class="carousel-dot" id="img-dot-4"></label>
+                            <label for="img-5" class="carousel-dot" id="img-dot-5"></label>
                         </div>
-                        <div class="carousel-controls">
-                            <label for="img-5" class="prev-slide">
-                                <span>&lsaquo;</span>
-                            </label>
-                            <label for="img-2" class="next-slide">
-                                <span>&rsaquo;</span>
-                            </label>
+                    </ul>
+                    <div class="mixi_portfolio_overlay"> Temporarily remove
+                        <div class="overflow_hover_text">
+                            <p>
+                                {Insert Description}
+                            </p>
+                            <a href="https://github.com/EricCatayas/ContactsManagement" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                            <a href="https://aspcontactsmanagement.azurewebsites.net" target="_blank"><i class="lnr">Visit</i></a>
                         </div>
-                    </li>
-                    <input type="radio" name="radio-buttons" id="img-2" />
-                    <li class="slide-container">
-                        <div class="slide-image">
-                            <img src="~/images/contacts_management_persons_index2.png">
-                        </div>
-                        <div class="carousel-controls">
-                            <label for="img-1" class="prev-slide">
-                                <span>&lsaquo;</span>
-                            </label>
-                            <label for="img-3" class="next-slide">
-                                <span>&rsaquo;</span>
-                            </label>
-                        </div>
-                    </li>
-                    <input type="radio" name="radio-buttons" id="img-3" />
-                    <li class="slide-container">
-                        <div class="slide-image">
-                            <img src="~/images/contacts_management_persons_edit.png">
-                        </div>
-                        <div class="carousel-controls">
-                            <label for="img-2" class="prev-slide">
-                                <span>&lsaquo;</span>
-                            </label>
-                            <label for="img-4" class="next-slide">
-                                <span>&rsaquo;</span>
-                            </label>
-                        </div>
-                    </li>
-                    <input type="radio" name="radio-buttons" id="img-4" />
-                    <li class="slide-container">
-                        <div class="slide-image">
-                            <img src="~/images/contacts_management_events_index.png">
-                        </div>
-                        <div class="carousel-controls">
-                            <label for="img-3" class="prev-slide">
-                                <span>&lsaquo;</span>
-                            </label>
-                            <label for="img-5" class="next-slide">
-                                <span>&rsaquo;</span>
-                            </label>
-                        </div>
-                    </li>
-                    <input type="radio" name="radio-buttons" id="img-5" />
-                    <li class="slide-container">
-                        <div class="slide-image">
-                            <img src="~/images/contacts_management_logs_index.png">
-                        </div>
-                        <div class="carousel-controls">
-                            <label for="img-4" class="prev-slide">
-                                <span>&lsaquo;</span>
-                            </label>
-                            <label for="img-1" class="next-slide">
-                                <span>&rsaquo;</span>
-                            </label>
-                        </div>
-                    </li>
-                    <div class="carousel-dots">
-                        <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
-                        <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
-                        <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
-                        <label for="img-4" class="carousel-dot" id="img-dot-4"></label>
-                        <label for="img-5" class="carousel-dot" id="img-dot-5"></label>
                     </div>
-                </ul>
-            </div>
-        </div>
-        <div class="row d-flex justify-content-evenly">
-            <div class="col-md-6 col-xs-12">
-                <a href="https://github.com/EricCatayas/ContactsManagement" target="_blank" class="btn btn-larg mx-2">Github</a>
-            </div>
-            <div class="col-md-6 col-xs-12">
-                <a href="https://aspcontactsmanagement.azurewebsites.net" target="_blank" class="btn btn-larg mx-2">Visit Contacts Management</a>
+                </div>
             </div>
         </div>
 
         <!-- TODO: <> Click/Hover to view project info.</> -->
         <div class="container">
             <div class="col">                                
-                <div class="@*main_mix_content*@  sections">
-
+                <div class="sections">
                     <div class="row">                        
-                        <div class="col-md-6 mix cat2 no-padding">
+                        <div class="col-md-6 mix no-padding">
                             <div class="single_mixi_portfolio">
                                 <img src="~/images/FarmEcommerce_HomePage.png" alt="" />
                                 <h3>(Coming Soon)</h3>
                                 <div class="mixi_portfolio_overlay">
                                     <div class="overflow_hover_text">
-                                        <p style="color:azure;">
+                                        <p>
                                             This app is an online marketplace that facilitates exchange of agricultural products in the Philippines. 
                                             It is inspired from Agro-Market24, an international agricultural exchange platform based in Europe.                                           
                                         </p>
@@ -280,13 +269,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 mix cat2 no-padding">
+                        <div class="col-md-6 mix no-padding">
                             <div class="single_mixi_portfolio">
                                 <img src="~/images/campgrounds_index.png" alt="" />
                                 <h3>Tropical Campgrounds</h3>
                                 <div class="mixi_portfolio_overlay">
                                     <div class="overflow_hover_text">
-                                        <p style="color:azure;">
+                                        <p>
                                             A site for users to share reviews and their experiences on camping sites
                                             throughout the Philippines.
                                         </p>
@@ -298,37 +287,37 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 mix cat2 no-padding">
+                        <div class="col-md-6 mix no-padding">
                             <div class="single_mixi_portfolio">
                                 <img src="~/images/TravelRecordsApp.png" alt="" />
                                 <h3>Travel Records App (Xamarin Forms Project)</h3>
                                 <div class="mixi_portfolio_overlay">
                                     <div class="overflow_hover_text">
-                                        <p style="color:azure;">This project was inspired from Eduardo Rosas' cross platform IOS and Android application using Xamarin Forms, a 27.5 hr. course in Udemy</p>
+                                        <p>This project was inspired from Eduardo Rosas' cross platform IOS and Android application using Xamarin Forms, a 27.5 hr. course in Udemy</p>
                                         <a href="https://github.com/EricCatayas/TravelRecordApp" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 mix cat2 no-padding">
+                        <div class="col-md-6 mix no-padding">
                             <div class="single_mixi_portfolio">
                                 <img src="~/images/Dastru_POS3.png" alt="" />
                                 <h3>Inventory Management (.NET Console Application)</h3>
                                 <div class="mixi_portfolio_overlay">
                                     <div class="overflow_hover_text">
-                                        <p style="color:azure;">This .NET Console school project is designed for managing products inventory, while also providing checkout and purchase process for end users.</p>                                       
+                                        <p>This .NET Console school project is designed for managing products inventory, while also providing checkout and purchase process for end users.</p>                                       
                                         <a href="https://github.com/EricCatayas/DASTRU-FinalOutput" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        @*<div class="col-md-6 mix cat2 no-padding">
+                        @*<div class="col-md-6 mix no-padding">
                             <div class="single_mixi_portfolio">
                                 <img src="~/images/TechTreeHomePage.png" alt="" />
                                 <h3>Tech Tree</h3>
                                 <div class="mixi_portfolio_overlay">
                                     <div class="overflow_hover_text">
-                                        <p style="color:azure;">
+                                        <p>
                                             Empowered by administrator functionalities, it allows seamless
                                             uploading and management of online courses and materials,
                                             providing users a basic online learning platform.
@@ -352,29 +341,35 @@
                 <div class="row">
                     <div class="main_counter sections text-center">
                         <div class="col-sm-10 col-sm-offset-1">
-                            <div class="row" style="color:white;">
+                            <div class="row">
                                 <div class="col-sm-4 col-xs-12">
-                                    <h3>Front-End</h3>
-                                    <p>ReactJS</p>
-                                    <p>Bootstrap</p>
-                                    <p>Razor Pages</p>
-                                    <p>jQuery & AJAX</p>
+                                    <div class="single_counter_right">
+                                        <h3>Front-End</h3>
+                                        <p>ReactJS</p>
+                                        <p>Bootstrap</p>
+                                        <p>Razor Pages</p>
+                                        <p>jQuery & AJAX</p>
+                                    </div>
                                 </div>
                                 <div class="col-sm-4 col-xs-12">
+                                    <div class="single_counter_right">
                                     <h3>Back-End</h3>
                                     <p>ASP .NET Core 6 & 7</p>
                                     <p>Express.js</p>
                                     <p>Node.js</p>
                                     <p>Entity Framework Core</p>
                                     <p>Azure SQL Database</p>
+                                    </div>
                                     <p>MongoDB Atlas</p>
                                 </div>
                                 <div class="col-sm-4 col-xs-12">
+                                    <div class="single_counter_right">
                                     <h3>Architecture / Design</h3>
                                     <p>REST API</p>
                                     <p>MVC</p>
                                     <p>Clean Architecture</p>
                                     <p>Event Driven Architecture</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -399,9 +394,11 @@
                                     Alongside .NET, I also have experience with ReactJs, Node.js, Express.js, and MongoDB.
                                     If you have any questions or would like to discuss potential opportunities, please feel free to reach out.
                                 </p>
-
-                                <a href="https://github.com/EricCatayas" target="_blank" class="btn btn-larg mx-2">Github</a>
-                                <a href="~/documents/Eric Jay Catayas Resume 2024.pdf" target="_blank" class="btn btn-larg mx-2" target="_blank">Resume</a>
+                                <div class="d-flex flex-row">
+                                    <a href="https://github.com/EricCatayas" target="_blank" class="btn btn-larg mx-2">Github</a>
+                                    <a href="~/documents/Eric Jay Catayas Resume 2024.pdf" target="_blank" class="btn btn-larg mx-2" target="_blank">Resume</a>
+                                   
+                                </div>
                             </div>
                         </div>
                     </div>

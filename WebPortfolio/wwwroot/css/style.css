@@ -615,6 +615,14 @@ input::-ms-input-placeholder {
     transform: rotate(45deg);
 }
 
+@media only screen and (max-width: 767px) {
+    .home .main_home {
+        text-align: center; 
+        margin: 0 auto; 
+        max-width: 90%; 
+    }
+}
+
 
 
 
@@ -635,8 +643,8 @@ input::-ms-input-placeholder {
     background: #ffffff;
 }
 .main_service_area{}
-.main_service_area .signle_service_left{}
-.main_service_area .signle_service_left h2{
+.main_service_area .single_service_left{}
+.main_service_area .single_service_left h2{
     font-size: 7.964375rem;
     line-height: 10rem;
     color: #e1e1e1;
@@ -669,6 +677,12 @@ input::-ms-input-placeholder {
     color:#333333;
 }
 
+@media only screen and (max-width: 767px) {
+    .main_service_area .single_service_left h2 {
+        font-size: 6rem;
+    }
+}
+
 
 
 
@@ -682,7 +696,10 @@ input::-ms-input-placeholder {
       
 }
 .main_choose_area .main_choose_content{}
-.main_choose_area .main_choose_content .single_choose_content{} 
+.main_choose_area .main_choose_content .single_choose_content {
+    display: flex;
+    flex-direction: column;
+} 
 .main_choose_area .main_choose_content .single_choose_content h1{
     font-size:3.125rem;
     color:#503392;
@@ -692,10 +709,17 @@ input::-ms-input-placeholder {
     color:snow;
     line-height: 2rem;
     margin:40px 0px;
-    width:60%;
-} 
+}
 
-
+@media (max-width: 768px) {
+    .choose {
+        background-position: 0% center; /* Adjust the background position to start from the left */
+    }
+    .main_choose_area .main_choose_content .single_choose_content {
+        align-content: center;       
+        text-align: center;
+    }
+}
 
 
 
@@ -736,7 +760,6 @@ input::-ms-input-placeholder {
 
 .single_mixi_portfolio{
     position:relative;
-    float: left;
     border: 3px solid #fff;
     width:100%;
 }
@@ -765,6 +788,11 @@ input::-ms-input-placeholder {
     height: 80%;
     border: 20px solid #4e3391;
     padding: 90px 0px 0px 0px;
+
+    z-index: 999;
+}
+.mixi_portfolio_overlay .overflow_hover_text p{
+    color: azure;
 }
 .mixi_portfolio_overlay .overflow_hover_text i{
     color:azure;
@@ -805,11 +833,13 @@ input::-ms-input-placeholder {
     height: 380px;
     overflow: hidden;
 }
-.counter .main_counter{}
+.counter .main_counter{
+    color:azure;
+}
 
 
 .counter .main_counter .single_counter_right{
-    margin-top:30px;
+    margin-top:20px;
     overflow: hidden;
     display: block;
 }

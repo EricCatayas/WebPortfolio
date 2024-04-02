@@ -1,19 +1,15 @@
 ﻿
 .carousel {
-    margin-left: 15%;
-    margin-right: 15%;
-    /*height: 700px;
-    max-height: 800px;*/
-    max-height: 600px; /* Allow the carousel to grow up to a maximum height */
+    max-height: 600px;
+    height: 100%;
+    width: 100%;
 }
 
-ul.slides {
-    display: block; 
-    position: relative;
+ul.slides { 
+    display: block;
+    position: relative;    
+    max-width: 100%;
     height: 100%;
-    max-height: 600px;
-    min-height: 500px;
-    margin: 0;
     padding: 0;
     overflow: hidden;
     list-style: none;
@@ -35,29 +31,44 @@ ul.slides input {
 
 .slide-container {
     display: block;
-    /*display: flex; *//* Use flexbox for the slide container */
 }
 
 .slide-image {
     display: flex;
-    /*display: block;*/
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center;
+    align-items: center;
     position: absolute;
     width: 100%;
-    height: 550px;
-    min-height: 550px;
-    max-height: 650px;
     top: 0;
     opacity: 0;
     transition: all .7s ease-in-out;
 }
 
-    .slide-image img {
-        max-width: 100%; /* Use max-width instead of width */
-        max-height: 100%; /* Use max-height instead of height */
-        object-fit: contain;
+.slide-image img {
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: contain;
+}
+
+
+@media (min-width: 801px) and (max-width: 1000px) {
+    .carousel, ul.slides {
+        height: 400px; /* 70% of viewport height */
     }
+}
+@media (min-width: 401px) and (max-width: 800px) {
+    .carousel, ul.slides {
+        height: 340px; /* 60% of viewport height */
+    }
+}
+@media (max-width: 400px) {
+    .carousel, ul.slides {
+        height: 260px; /* 50% of viewport height */
+    }
+}
+
+
+/* carousel controls */
 
 .carousel-controls {
     position: absolute;
@@ -67,112 +78,57 @@ ul.slides input {
     z-index: 999;
     font-size: 100px;
     line-height: 550px;
-    color: blueviolet;
+    color: azure;
 }
 
-    .carousel-controls label {
-        display: none;
-        position: absolute;
-        padding: 0 20px;
-        opacity: 0;
-        transition: opacity .2s;
+.carousel-controls label {
+    display: none;
+    position: absolute;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label {
+    opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+    opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+    width: 49%;
+    text-align: left;
+    left: 0;
+}
+
+.carousel-controls .next-slide {
+    width: 49%;
+    text-align: right;
+    right: 0;
+}
+
+.carousel-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 1000;
+    text-align: center;
+}
+
+    .carousel-dots .carousel-dot {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #fff;
+        opacity: 0.5;
+        margin: 10px;
         cursor: pointer;
     }
-
-/* Phone size */
-@media (max-width: 400px) {
-    .carousel {
-        margin-left: 5%; /* Adjust the left margin for phones */
-        margin-right: 5%; /* Adjust the right margin for phones */
-        min-height:300px;
-        max-height: 300px; /* Adjust the maximum height for phones */
-    }
-    ul.slides {
-        height: 100%;
-        max-height: 300px;
-        min-height: 300px;
-    }
-    .slide-image {
-        min-height: 200px;
-        max-height: 200px;
-    }
-}
-/* Tablet Size */
-@media (max-width: 800px) {
-    .carousel {
-        margin-left: 8%; /* Adjust the left margin for phones */
-        margin-right: 8%; /* Adjust the right margin for phones */
-        max-height: 400px; /* Adjust the maximum height for phones */
-        min-height: 400px; /* Adjust the maximum height for phones */
-    }
-    ul.slides {
-        height: 100%;
-        max-height: 400px;
-        min-height: 400px;
-    }
-    .slide-image {
-        min-height: 400px;
-        max-height: 400px;
-    }
-}
-@media (max-width: 1000px) {
-    .carousel {
-        margin-left: 10%; /* Adjust the left margin for phones */
-        margin-right: 10%; /* Adjust the right margin for phones */
-        max-height: 500px; /* Adjust the maximum height for phones */
-        min-height: 500px; /* Adjust the maximum height for phones */
-    }
-
-    ul.slides {
-        height: 100%;
-        max-height: 500px;
-        min-height: 500px;
-    }
-
-    .slide-image {
-        min-height: 500px;
-        max-height: 500px;
-    }
-}
-
-    .slide-image:hover + .carousel-controls label {
-        opacity: 0.5;
-    }
-
-    .carousel-controls label:hover {
-        opacity: 1;
-    }
-
-    .carousel-controls .prev-slide {
-        width: 49%;
-        text-align: left;
-        left: 0;
-    }
-
-    .carousel-controls .next-slide {
-        width: 49%;
-        text-align: right;
-        right: 0;
-    }
-
-    .carousel-dots {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 20px;
-        z-index: 999;
-        text-align: center;
-    }
-
-        .carousel-dots .carousel-dot {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background-color: #fff;
-            opacity: 0.5;
-            margin: 10px;
-        }
 
     input:checked + .slide-container .slide-image {
         opacity: 1;
