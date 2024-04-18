@@ -1,4 +1,7 @@
-﻿
+﻿@{
+    string leftButton = "<span>&lsaquo;</span>";
+    string rightButton = "<span>&rsaquo;</span>";
+}
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -152,7 +155,6 @@
             <h6>Click or hover to view description and links</h6>
         </div>
 
-        @*TODO: Remove white space in left*@
         <div class="container">
             <div class="col-xs-12">
                 <div class="carousel single_mixi_portfolio wow fadeIn" data-wow-duration="700ms">
@@ -164,10 +166,10 @@
                             </div>
                             <div class="carousel-controls">
                                 <label for="img-5" class="prev-slide">
-                                    <span>&lsaquo;</span>
+                                    @Html.Raw(leftButton)
                                 </label>
                                 <label for="img-2" class="next-slide">
-                                    <span>&rsaquo;</span>
+                                    @Html.Raw(rightButton)
                                 </label>
                             </div>
                         </li>
@@ -178,10 +180,10 @@
                             </div>
                             <div class="carousel-controls">
                                 <label for="img-1" class="prev-slide">
-                                    <span>&lsaquo;</span>
+                                    @Html.Raw(leftButton)
                                 </label>
                                 <label for="img-3" class="next-slide">
-                                    <span>&rsaquo;</span>
+                                    @Html.Raw(rightButton)
                                 </label>
                             </div>
                         </li>
@@ -192,10 +194,10 @@
                             </div>
                             <div class="carousel-controls">
                                 <label for="img-2" class="prev-slide">
-                                    <span>&lsaquo;</span>
+                                    @Html.Raw(leftButton)
                                 </label>
                                 <label for="img-4" class="next-slide">
-                                    <span>&rsaquo;</span>
+                                    @Html.Raw(rightButton)
                                 </label>
                             </div>
                         </li>
@@ -206,10 +208,10 @@
                             </div>
                             <div class="carousel-controls">
                                 <label for="img-3" class="prev-slide">
-                                    <span>&lsaquo;</span>
+                                    @Html.Raw(leftButton)
                                 </label>
                                 <label for="img-5" class="next-slide">
-                                    <span>&rsaquo;</span>
+                                    @Html.Raw(rightButton)
                                 </label>
                             </div>
                         </li>
@@ -220,10 +222,10 @@
                             </div>
                             <div class="carousel-controls">
                                 <label for="img-4" class="prev-slide">
-                                    <span>&lsaquo;</span>
+                                    @Html.Raw(leftButton)
                                 </label>
                                 <label for="img-1" class="next-slide">
-                                    <span>&rsaquo;</span>
+                                    @Html.Raw(rightButton)
                                 </label>
                             </div>
                         </li>
@@ -235,13 +237,15 @@
                             <label for="img-5" class="carousel-dot" id="img-dot-5"></label>
                         </div>
                     </ul>
-                    <div class="mixi_portfolio_overlay"> Temporarily remove
+                    <div class="mixi_portfolio_overlay">
                         <div class="overflow_hover_text">
                             <p>
                                 Contacts Management is a web app for organizing personal contacts, tracking logs, and managing important events or to-do lists. Developed using ASP .NET Core 7, this application embodies the principles of Clean Architecture, MVC, and Repository design pattern for scalability and modularity.
                             </p>
-                            <a href="https://github.com/EricCatayas/ContactsManagement" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>
-                            <a href="https://aspcontactsmanagement.azurewebsites.net" target="_blank"><i class="lnr">Visit</i></a>
+                            <div class="d-flex">
+                                <a href="https://aspcontactsmanagement.azurewebsites.net" target="_blank"><i class="lnr">Visit</i></a>
+                                <a href="https://github.com/EricCatayas/ContactsManagement" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -263,8 +267,10 @@
                                             This app is an online marketplace that facilitates exchange of agricultural products in the Philippines. 
                                             It is inspired from Agro-Market24, an international agricultural exchange platform based in Europe.                                           
                                         </p>
-                                        <a href="https://github.com/EricCatayas/Farm-Ecommerce-React" target="_blank"><i class="lnr">React</i></a>
-                                        <a href="https://github.com/EricCatayas/FarmEcommerce-WebAPI" target="_blank"><i class="lnr">API</i></a>
+                                        <div class="d-flex">
+                                            <a href="https://github.com/EricCatayas/Farm-Ecommerce-React" target="_blank"><i class="lnr">React</i></a>
+                                            <a href="https://github.com/EricCatayas/FarmEcommerce-WebAPI" target="_blank"><i class="lnr">API</i></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -278,10 +284,13 @@
                                     <div class="overflow_hover_text">
                                         <p>
                                             A site for users to share reviews and their experiences on camping sites
-                                            throughout the Philippines.
+                                            throughout the Philippines. This app is inspired from Colt Steele's Yelp Camp app
+                                            from his 60 hr. Udemy course: The Complete Web Development Bootcamp 2023.
                                         </p>
-                                        <a href="https://tropicalcampground.azurewebsites.net" target="_blank"><i class="lnr">Visit</i></a>
-                                        <a href="https://github.com/EricCatayas/TropicalCampgrounds" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                                        <div class="d-flex">
+                                            <a href="https://tropicalcampground.azurewebsites.net" target="_blank"><i class="lnr">Visit</i></a>
+                                            <a href="https://github.com/EricCatayas/TropicalCampgrounds" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -296,7 +305,9 @@
                                 <div class="mixi_portfolio_overlay">
                                     <div class="overflow_hover_text">
                                         <p>This project was inspired from Eduardo Rosas' cross platform IOS and Android application using Xamarin Forms, a 27.5 hr. course in Udemy</p>
-                                        <a href="https://github.com/EricCatayas/TravelRecordApp" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                                        <div class="d-flex">
+                                            <a href="https://github.com/EricCatayas/TravelRecordApp" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -313,8 +324,10 @@
                                             uploading and management of online courses and materials,
                                             providing users a basic online learning platform.
                                         </p>
-                                        <a href="http://techtree.azurewebsites.net" target="_blank"><i class="lnr">Visit</i></a>
-                                        <a href="https://github.com/EricCatayas/TechTreeWebApp" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                                        <div class="d-flex">
+                                            <a href="http://techtree.azurewebsites.net" target="_blank"><i class="lnr">Visit</i></a>
+                                            <a href="https://github.com/EricCatayas/TechTreeWebApp" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -344,22 +357,20 @@
                                 </div>
                                 <div class="col-sm-4 col-xs-12">
                                     <div class="single_counter_right">
-                                    <h3>Back-End</h3>
-                                    <p>ASP .NET Core 6 & 7</p>
-                                    <p>Express.js</p>
-                                    <p>Node.js</p>
-                                    <p>Entity Framework Core</p>
-                                    <p>Azure SQL Database</p>
-                                    </div>
-                                    <p>MongoDB Atlas</p>
-                                </div>
+                                        <h3>Back-End</h3>
+                                        <p>ASP .NET Core 6 & 7</p>
+                                        <p>Express.js</p>
+                                        <p>Node.js</p>
+                                        <p>Entity Framework Core</p>
+                                        <p>Azure SQL Database</p>
+                                        <p>MongoDB Atlas</p>
                                 <div class="col-sm-4 col-xs-12">
                                     <div class="single_counter_right">
-                                    <h3>Architecture / Design</h3>
-                                    <p>REST API</p>
-                                    <p>MVC</p>
-                                    <p>Clean Architecture</p>
-                                    <p>Event Driven Architecture</p>
+                                        <h3>Architecture / Design</h3>
+                                        <p>REST API</p>
+                                        <p>MVC</p>
+                                        <p>Clean Architecture</p>
+                                        <p>Event Driven Architecture</p>
                                     </div>
                                 </div>
                             </div>
@@ -381,8 +392,8 @@
                             <div class="single_choose_content wow fadeInLeft" data-wow-duration="1500ms">
                                 <h1>About Me</h1>
                                 <p>
-                                    I'm a web developer with a primary focus on .NET technologies for server side development.
-                                    Alongside .NET, I also have experience with ReactJs, Node.js, Express.js, and MongoDB.
+                                    I'm a computer science student with full-stack web development experience from designing,
+                                    developing, and hosting websites using various technologies such as React, .NET, Node.js, SQL and Azure.
                                     If you have any questions or would like to discuss potential opportunities, please feel free to reach out.
                                 </p>
                                 <div class="d-flex flex-row">
