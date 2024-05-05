@@ -11,7 +11,6 @@ var app = builder.Build();
  *     We can Make bg more pinkish violet
  *     Design Wise: 
  *         Mobile Phone Responsiveness: Enlarge text, center content, remove white space
- *     Dastru Project: ReadMe
  *     
  */
 app.UseStaticFiles();
