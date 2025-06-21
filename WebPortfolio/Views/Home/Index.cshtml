@@ -1,6 +1,5 @@
 ﻿@{
-    string leftButton = "<span>&lsaquo;</span>";
-    string rightButton = "<span>&rsaquo;</span>";
+
 }
 <head>
     <meta charset="utf-8">
@@ -14,8 +13,11 @@
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/scroll-down.css">
+
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
 
     <!--For Plugins external css-->
@@ -50,13 +52,14 @@
                                         <span class="icon-bar"></span>
                                     </button>
                                     <a class="navbar-brand" href="#home">
-                                        <h2 style="font-family:'Roboto', Arial, sans-serif;font-weight: 700;letter-spacing: 2px;color:white;text-transform: uppercase;">Eric Jay</h2>
+                                        <h3 style="font-family:'Roboto', Arial, sans-serif;font-weight: 700;letter-spacing: 2px;color:white;text-transform: uppercase;">Eric Jay</h3>
                                     </a>
                                 </div>
 
                                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                     <ul class="nav navbar-nav navbar-right">
                                         <li><a href="#home">Home</a></li>
+                                        <li><a href="#work">Experience</a></li>
                                         <li><a href="#projects">Projects</a></li>
                                         <li><a href="#about">About</a></li>
                                         <li><a href="#contact">Contact</a></li>
@@ -71,8 +74,9 @@
             </div>
 
         </div>
-    </header> 
-    <!--End of header -->
+    </header>
+
+    <!-- Landing Page -->
     <section id="home" class="home">
         <div class="overlay">
             <div class="container">
@@ -81,9 +85,9 @@
                         <div class="single_home_slider">
                             <div class="main_home wow fadeInLeft" data-wow-duration="700ms">
                                 <h1>Eric Jay Catayas</h1>
-                                <p class="subtitle">Aspiring Web Developer</p>                                
+                                <p class="subtitle">Fullstack Web Developer</p>
                             </div>
-                        </div>    
+                        </div>
                     </div>
                 </div>
             </div>
@@ -95,7 +99,37 @@
         </svg>
     </section>
 
-    
+    <!-- Work History Modal -->
+    <div class="modal fade" id="workExpModal" tabindex="-1" role="dialog" aria-labelledby="workExpModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="workExpModalLabel"></h4>
+                    <h5 id="modalDate"></h5>
+                    <h6><a id="modalCompanyLink" href="" target="_blank"></a></h6>
+                </div>
+                <div class="modal-body">
+                    <div class="work-history-modal">
+                        <p id="modalContent"></p>
+                        <h6>Contributions:</h6>
+                        <ul id="modalContributions"></ul>
+                        <h6>Technologies Used:</h6>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <ul id="modalTechnologies"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-small" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Frameworks and Tools -->
     <section id="service" class="service">
         <div class="container">
             <div class="row">
@@ -110,36 +144,60 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="single_service_right wow fadeInRight" data-wow-duration="900ms">
-                            <div class="single_service">
-                                <div class="single_service_icon">
-                                    <img src="~/images/React.png"/>
+                            <div class="row single_service_row">
+                                <div class="col-xs-6 single_service">
+                                    <div class="single_service_icon">
+                                        <img src="~/images/React.png" />
+                                    </div>
+                                    <div class="single_service_content">
+                                        <h4>React</h4>
+                                    </div>
                                 </div>
-                                <div class="single_service_content">
-                                    <h3>React</h3>
-                                </div>
-                            </div>
-                            <div class="single_service">
-                                <div class="single_service_icon">
-                                    <img src="~/images/ASPNETCore.png"/>
-                                </div>
-                                <div class="single_service_content">
-                                    <h3>ASP .NET Core</h3>
-                                </div>
-                            </div>
-                            <div class="single_service">
-                                <div class="single_service_icon">
-                                    <img src="~/images/sqlserver.png"/>
-                                </div>
-                                <div class="single_service_content">
-                                    <h3>Microsoft SQL Server</h3>
+                                <div class="col-xs-6 single_service">
+                                    <div class="single_service_icon">
+                                        <img src="~/images/vue.js.png" />
+                                    </div>
+                                    <div class="single_service_content">
+                                        <h4>Vue.js</h4>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="single_service">
-                                <div class="single_service_icon">
-                                    <img src="~/images/azure.png"/>
+                            <div class="row single_service_row">
+                                <div class="col-xs-6 single_service">
+
+                                    <div class="single_service_icon">
+                                        <img src="~/images/ASPNETCore.png" />
+                                    </div>
+                                    <div class="single_service_content">
+                                        <h4>ASP .NET Core</h4>
+                                    </div>
                                 </div>
-                                <div class="single_service_content">
-                                    <h3>Microsoft Azure</h3>
+                                <div class="col-xs-6 single_service">
+                                    <div class="single_service_icon">
+                                        <img src="~/images/node-js-4.png" />
+                                    </div>
+                                    <div class="single_service_content">
+                                        <h4>Node.js</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row single_service_row">
+                                <div class="col-xs-6 single_service">
+                                    <div class="single_service_icon">
+                                        <img src="~/images/sqlserver.png" />
+                                    </div>
+                                    <div class="single_service_content">
+                                        <h4>SQL Server</h4>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 single_service">
+
+                                    <div class="single_service_icon">
+                                        <img src="~/images/mysql.png" />
+                                    </div>
+                                    <div class="single_service_content">
+                                        <h4>MySQL</h4>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -148,124 +206,76 @@
             </div>
         </div>
     </section>
-    <!-- My Projects Section -->
-    <section id="projects" class="portfolio text-center">
-        <div class="head_title">
-            <h2>My Projects</h2>
-            <h6>Click or hover to view description and links</h6>
-        </div>
 
+    <!-- Work Experience -->
+    <section id="work" class="work text-center">
         <div class="container">
-            <div class="col-xs-12">
-                <div class="carousel single_mixi_portfolio wow fadeIn" data-wow-duration="700ms">
-                    <ul class="slides">
-                        <input type="radio" name="radio-buttons" id="img-1" checked />
-                        <li class="slide-container">
-                            <div class="slide-image">
-                                <img src="~/images/contacts_management_home.png">
+            <div class="head_title">
+                <h2>Work Experience</h2>
+                <h6>I started my professional career at the age of 20 as a self-taught and Computer Science undergraduate. These are the roles that have shaped my expertise in full-stack web development.</h6>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="featured-carousel owl-carousel">
+                        <div class="item">
+                            <div class="row" style="position: relative;">
+                                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4 col-md-offset-1">
+                                    <div class="carousel-content">
+                                        <h3>Full Stack Development Intern (500 hrs.)</h3>
+                                        <h5>June 2024 - October 2024</h5>
+                                        <h5><a href="https://mydreamvisa.com/" target="_blank">My Dream Visa (MDV)</a></h5>
+                                        <p>In the summer of 2024, I volunteered as a Full Stack Development Intern to enhance my skills and gain hands-on experience. During the internship, we developed an application designed to streamline the USCIS marriage-based green card application process.</p>
+                                        <button type="button" class="btn btn-small btn-primary" data-toggle="modal" data-target="#workExpModal" data-role="intern">Read More</button>
+                                    </div>
+                                </div>
+                                <div class="job-image-container">
+                                    <img class="img" src="~/images/contacts-management-home.png" />
+                                </div>
                             </div>
-                            <div class="carousel-controls">
-                                <label for="img-5" class="prev-slide">
-                                    @Html.Raw(leftButton)
-                                </label>
-                                <label for="img-2" class="next-slide">
-                                    @Html.Raw(rightButton)
-                                </label>
-                            </div>
-                        </li>
-                        <input type="radio" name="radio-buttons" id="img-2" />
-                        <li class="slide-container">
-                            <div class="slide-image">
-                                <img src="~/images/contacts_management_persons_index2.png">
-                            </div>
-                            <div class="carousel-controls">
-                                <label for="img-1" class="prev-slide">
-                                    @Html.Raw(leftButton)
-                                </label>
-                                <label for="img-3" class="next-slide">
-                                    @Html.Raw(rightButton)
-                                </label>
-                            </div>
-                        </li>
-                        <input type="radio" name="radio-buttons" id="img-3" />
-                        <li class="slide-container">
-                            <div class="slide-image">
-                                <img src="~/images/contacts_management_persons_edit.png">
-                            </div>
-                            <div class="carousel-controls">
-                                <label for="img-2" class="prev-slide">
-                                    @Html.Raw(leftButton)
-                                </label>
-                                <label for="img-4" class="next-slide">
-                                    @Html.Raw(rightButton)
-                                </label>
-                            </div>
-                        </li>
-                        <input type="radio" name="radio-buttons" id="img-4" />
-                        <li class="slide-container">
-                            <div class="slide-image">
-                                <img src="~/images/contacts_management_events_index.png">
-                            </div>
-                            <div class="carousel-controls">
-                                <label for="img-3" class="prev-slide">
-                                    @Html.Raw(leftButton)
-                                </label>
-                                <label for="img-5" class="next-slide">
-                                    @Html.Raw(rightButton)
-                                </label>
-                            </div>
-                        </li>
-                        <input type="radio" name="radio-buttons" id="img-5" />
-                        <li class="slide-container">
-                            <div class="slide-image">
-                                <img src="~/images/contacts_management_logs_index.png">
-                            </div>
-                            <div class="carousel-controls">
-                                <label for="img-4" class="prev-slide">
-                                    @Html.Raw(leftButton)
-                                </label>
-                                <label for="img-1" class="next-slide">
-                                    @Html.Raw(rightButton)
-                                </label>
-                            </div>
-                        </li>
-                        <div class="carousel-dots">
-                            <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
-                            <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
-                            <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
-                            <label for="img-4" class="carousel-dot" id="img-dot-4"></label>
-                            <label for="img-5" class="carousel-dot" id="img-dot-5"></label>
                         </div>
-                    </ul>
-                    <div class="mixi_portfolio_overlay">
-                        <div class="overflow_hover_text">
-                            <p>
-                                Contacts Management is a web app for organizing personal contacts, tracking logs, and managing important events or to-do lists. Developed using ASP .NET Core 7, this application embodies the principles of Clean Architecture, MVC, and Repository design pattern for scalability and modularity.
-                            </p>
-                            <div class="d-flex">
-                                <a href="https://aspcontactsmanagement.azurewebsites.net" target="_blank"><i class="lnr">Visit</i></a>
-                                <a href="https://github.com/EricCatayas/ContactsManagement" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4 col-md-offset-1">
+                                    <div class="carousel-content">
+                                        <h3>Part-time Full Stack Developer</h3>
+                                        <h5>September 2024 - Present</h5>
+                                        <h5><a href="https://mydreamvisa.com/" target="_blank">My Dream Visa (MDV)</a></h5>
+                                        <p>Following the completion of my internship, I was offered a part-time position as a Junior Full Stack Developer at My Dream Visa. In this role, I contributed to the development of new USCIS immigration services, including the Parent Green Card application, Form I-751, and Form I-129F.</p>
+                                        <button type="button" class="btn btn-small btn-primary" data-toggle="modal" data-target="#workExpModal" data-role="developer">Read More</button>
+                                    </div>
+                                </div>
+                                <div class="job-image-container">
+                                    <img class="img" src="~/images/contacts-management-edit.png" />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+
+    <!-- Personal Projects -->
+    <section id="projects" class="portfolio sections text-center">
+        <div class="head_title">
+            <h2>Personal Projects</h2>
+            <h6>Click or hover to view description and links</h6>
+        </div>
 
         <div class="container">
-            <div class="col">                                
-                <div class="sections">
-                    <div class="row">                        
+            <div class="col">
+                    <div class="row">
                         @* Farm Ecommerce *@
                         <div class="col-md-6 mix no-padding">
                             <div class="single_mixi_portfolio wow fadeInLeft" data-wow-duration="700ms">
-                                <img src="~/images/Agristore-Home.jpg" alt="" />
-                                <h3>AgriStore</h3>
+                                <img src="~/images/farmecommerce-home.jpg" alt="" />
+                                <h4>AgriStore</h4>
                                 <div class="mixi_portfolio_overlay">
                                     <div class="overflow_hover_text">
                                         <p>
-                                            This app is an online marketplace that facilitates exchange of agricultural products in the Philippines. 
-                                            It is inspired from Agro-Market24, an international agricultural exchange platform based in Europe.                                           
+                                            This app is an online marketplace that facilitates exchange of agricultural products in the Philippines.
+                                            It is inspired from Agro-Market24, an international agricultural exchange platform based in Europe.
                                         </p>
                                         <div class="d-flex">
                                             <a href="https://agristore-online.netlify.app" target="_blank"><i class="lnr">Visit</i></a>
@@ -276,11 +286,31 @@
                                 </div>
                             </div>
                         </div>
+                        @* Contacts Management  *@
+                        <div class="col-md-6 mix no-padding">
+                            <div class="single_mixi_portfolio wow fadeInRight" data-wow-duration="700ms">
+                                <img src="~/images/contacts-management-home.png" alt="" />
+                                <h4>Contacts Management</h4>
+                                <div class="mixi_portfolio_overlay">
+                                    <div class="overflow_hover_text">
+                                        <p>
+                                            Contacts Management is a web app for organizing personal contacts, tracking logs, and managing important events or to-do lists. Developed using ASP .NET Core 7, this application embodies the principles of Clean Architecture, MVC, and Repository design pattern for scalability and modularity.
+                                        </p>
+                                        <div class="d-flex">
+                                            <a href="https://aspcontactsmanagement.azurewebsites.net" target="_blank"><i class="lnr">Visit</i></a>
+                                            <a href="https://github.com/EricCatayas/ContactsManagement" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
                         @* Tropical Campgrounds *@
                         <div class="col-md-6 mix no-padding">
-                            <div class="single_mixi_portfolio wow fadeInRight" data-wow-duration="700ms">e
-                                <img src="~/images/campgrounds_index.png" alt="" />
-                                <h3>Tropical Campgrounds</h3>
+                            <div class="single_mixi_portfolio wow fadeInRight" data-wow-duration="700ms">
+                                <img src="~/images/tropical-campgrounds.jpg" alt="" />
+                                <h4>Tropical Campgrounds</h4>
                                 <div class="mixi_portfolio_overlay">
                                     <div class="overflow_hover_text">
                                         <p>
@@ -296,13 +326,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
                         @* Travel Records App *@
                         <div class="col-md-6 mix no-padding">
                             <div class="single_mixi_portfolio wow fadeInLeft" data-wow-duration="700ms">
                                 <img src="~/images/TravelRecordsApp.png" alt="" />
-                                <h3>Travel Records App (Xamarin Forms Project)</h3>
+                                <h4>Travel Records App (Xamarin Forms Project)</h4>
                                 <div class="mixi_portfolio_overlay">
                                     <div class="overflow_hover_text">
                                         <p>This project was inspired from Eduardo Rosas' cross platform IOS and Android application using Xamarin Forms, a 27.5 hr. course in Udemy</p>
@@ -313,31 +341,10 @@
                                 </div>
                             </div>
                         </div>
-                        @* Tech Tree *@
-                        <div class="col-md-6 mix no-padding">
-                            <div class="single_mixi_portfolio wow fadeInRight" data-wow-duration="700ms">
-                                <img src="~/images/TechTreeHomePage.png" alt="" />
-                                <h3>Tech Tree</h3>
-                                <div class="mixi_portfolio_overlay">
-                                    <div class="overflow_hover_text">
-                                        <p>
-                                            Empowered by administrator functionalities, it allows seamless
-                                            uploading and management of online courses and materials,
-                                            providing users a basic online learning platform.
-                                        </p>
-                                        <div class="d-flex">
-                                            <a href="http://techtree.azurewebsites.net" target="_blank"><i class="lnr">Visit</i></a>
-                                            <a href="https://github.com/EricCatayas/TechTreeWebApp" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                     </div>
-                </div>
+                    </div>
             </div>
         </div>
-    </section> 
+    </section>
 
     <section id="counter" class="counter">
         <div class="overlay">
@@ -348,31 +355,29 @@
                             <div class="row">
                                 <div class="col-sm-4 col-xs-12">
                                     <div class="single_counter_right">
-                                        <h3>Front-End</h3>
+                                        <h4>Front-End</h4>
                                         <p>React</p>
+                                        <p>Vue.js</p>
                                         <p>Bootstrap</p>
-                                        <p>Razor Pages</p>
-                                        <p>jQuery & AJAX</p>
+                                        <p>Tailwind CSS</p>
                                     </div>
                                 </div>
                                 <div class="col-sm-4 col-xs-12">
                                     <div class="single_counter_right">
-                                        <h3>Back-End</h3>
-                                        <p>ASP .NET Core 6 & 7</p>
+                                        <h4>Back-End</h4>
+                                        <p>ASP .NET Core</p>
+                                        <p>Express.js</p>
                                         <p>Node.js</p>
                                         <p>Entity Framework Core</p>
-                                        <p>Azure SQL Database</p>
-                                        <p>MongoDB Atlas</p>
                                     </div>
                                 </div>
                                 <div class="col-sm-4 col-xs-12">
                                     <div class="single_counter_right">
-                                        <h3>Architecture / Design</h3>
+                                        <h4>Architecture / Design</h4>
                                         <p>RESTful Architecture</p>
                                         <p>MVC</p>
                                         <p>Clean Architecture</p>
                                         <p>Event Driven Architecture</p>
-                                        <p>Serverless Architecture</p>
                                     </div>
                                 </div>
                             </div>
@@ -394,14 +399,14 @@
                             <div class="single_choose_content wow fadeInLeft" data-wow-duration="1500ms">
                                 <h1>About Me</h1>
                                 <p>
-                                    I'm a computer science student with full-stack web development experience from designing,
-                                    developing, and hosting websites using various technologies such as React, .NET, Node.js, SQL and Azure.
+                                    I'm a Computer Science student and a Full Stack Developer with hands-on experience in designing, developing, and deploying web applications.
+                                    I was formerly a visual artist, but got hooked to web development because of the combination of architectural and design creativity.
                                     If you have any questions or would like to discuss potential opportunities, please feel free to reach out.
                                 </p>
                                 <div class="d-flex flex-row">
                                     <a href="https://github.com/EricCatayas" target="_blank" class="btn btn-larg mx-2">Github</a>
                                     <a href="~/documents/Eric Jay Catayas Resume.pdf" target="_blank" class="btn btn-larg mx-2" target="_blank">Resume</a>
-                                   
+
                                 </div>
                             </div>
                         </div>
@@ -410,7 +415,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Contact Section -->
 
     <section id="contact" class="contact">
@@ -459,10 +464,10 @@
                                     <ul>
                                         <li>
                                             <a href="">
-                                                <i class="fa fa-home"></i> Urgello , Cebu City, Cebu 
+                                                <i class="fa fa-home"></i> Urgello , Cebu City, Cebu
                                             </a>
                                         </li>
-                                        <li><a href=""><i class="fa fa-phone"></i> +63936 728 8737</a></li>
+                                        <li><a href=""><i class="fa fa-phone"></i> (+63)936 728 8737</a></li>
 
                                         <li><a href=""><i class="fa fa-envelope"></i> catayasericjay@gmail.com</a></li>
                                     </ul>
@@ -484,14 +489,14 @@
             <div class="main_footer">
                 <div class="row">*@
 
-                    @*<div class="col-sm-6 col-xs-12">
+    @*<div class="col-sm-6 col-xs-12">
                         <div class="copyright_text">
                             <p class=" wow fadeInRight" data-wow-duration="1s">Made with <i class="fa fa-heart"></i> by <a href="http://bootstrapthemes.co">Bootstrap Themes</a>2016. All Rights Reserved</p>
                             <a href="<a href="https://www.flaticon.com/free-icons/3d-map" title="3d-map icons">3d-map icons created by Freepik - Flaticon</a>"class=" wow fadeInRight" data-wow-duration="1s">Special thanks to</a>2016. All Rights Reserved</a>
                         </div>
                     </div>*@
 
-                    @*<div class="col-sm-6 col-xs-12">
+    @*<div class="col-sm-6 col-xs-12">
                         <div class="footer_socail">
                             <a href=""><i class="fa fa-facebook"></i></a>
                             <a href=""><i class="fa fa-twitter"></i></a>
@@ -502,7 +507,7 @@
                             <a href=""><i class="fa fa-behance"></i></a>
                         </div>
                     </div>*@
-                @*</div>
+    @*</div>
             </div>
         </div>
     </footer>*@
@@ -515,6 +520,7 @@
         <a href="#"><i class="fa fa-chevron-up"></i></a>
     </div>
 
+
     <script src="js/vendor/jquery-1.11.2.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
 
@@ -523,6 +529,9 @@
     <script src="js/jquery.easing.1.3.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+
+    <script src="js/popper.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
 
     <script src="js/email-service.js"></script>
 
