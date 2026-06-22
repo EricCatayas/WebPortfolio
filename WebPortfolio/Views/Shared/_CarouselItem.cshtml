@@ -1,0 +1,26 @@
+﻿@model WebPortfolio.Models.WorkExperience
+
+@{
+    // int descriptionLength = 250;
+    // string description = Model.Description.Length > descriptionLength ? Model.Description.Substring(0, descriptionLength) + "..." : Model.Description;
+    string description = Model.Description;
+}
+
+<div class="item">
+    <div class="row">
+        <div class="col-12 col-lg-4 align-self-center">
+            <div class="carousel-content ps-lg-3 text-lg-start">
+                <h3 class="cs_accent_color_2 cs_semi_bold">@Model.Title</h3>
+                <h5 class="cs_secondary_color">@Model.Date</h5>
+                <h5 class="cs_accent_color cs_accent_color_2_hover"><a href="@Model.Company.Link" target="_blank">@Model.Company.Name</a></h5>
+                <p>@description</p>
+                <a class="cs_btn cs_style_1" href="@Url.Content($"work/{Model.Id}")">
+                    Read More
+                </a>
+            </div>
+        </div>
+        <div class="col-12 col-lg-8 job-image-container">
+            <img class="img" src="@Url.Content(Model.ImageUrl as string)" alt="@Model.Company.Name" />
+        </div>
+    </div>
+</div>
