@@ -1,0 +1,39 @@
+﻿@model WebPortfolio.ViewModels.ProjectVM;
+
+<div class="cs_isotope_item" style="@Model.Style">
+    <div class="cs_portfolio cs_style_2 cs_radius_20 position-relative">
+        <div class="cs_browser cs_style_1">
+            <div class="cs_btns">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="cs_input_filed w-100"></div>
+        </div>
+        <a class="cs_portfolio_thumbnail cs_zoom">
+            <img class="cs_zoom_in w-100" src="@Url.Content(Model.ImageUrl)" alt="">
+        </a>
+        <div class="cs_portfolio_info w-100 cs_white_color cs_medium position-absolute">
+            <h2 class="cs_font_28 cs_white_color cs_medium mb-0">@Model.Title</h2>
+            <div class="cs_font_16 cs_gap_15 d-inline-flex cs_medium align-items-center">
+                @if (Model.Link != null)
+                {
+                    <a href="@Model.Link" target="_blank">
+
+                        <span class="cs_text_btn cs_secondary_font cs_type_1 text-uppercase">Live</span>
+                        <svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0L5 4.5L0 9L0 0Z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                }
+                @if (Model.GithubLink != null)
+                {
+                    <a href="@Model.GithubLink" target="_blank">
+                        <span class="cs_text_btn cs_secondary_font cs_type_1 text-uppercase">Github</span>
+                        <svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0L5 4.5L0 9L0 0Z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+</div>
