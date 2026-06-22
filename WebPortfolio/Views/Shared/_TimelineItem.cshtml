@@ -10,26 +10,26 @@
                 <a href="@Model.Experience.Company.Link" target="_blank">
                     <strong>@Model.Experience.Company.Name</strong>
                 </a>
-                <p class="cs_font_16">@Model.Experience.Company.Location (@Model.Experience.Type)</p>
+                <p class="font_16">@Model.Experience.Company.Location (@Model.Experience.Type)</p>
             </div>
         </summary>
 
         <div class="timeline-content">
             <div class="row">
                 <div class="col-md-8">
-                    <p class="cs_font_16">@Model.Experience.Description</p>
+                    <p class="font_16">@Model.Experience.Description</p>
                     <h6>Contributions</h6>
                     <ul>
                         @foreach (var contribution in Model.Experience.Contributions)
                         {
-                            <li class="cs_font_16">@contribution</li>
+                            <li class="font_16">@contribution</li>
                         }
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <div class="cs_portfolio cs_style_2 position-relative">
-                        <a href="@Url.Content(Model.Experience.ImageUrl)" target="_blank" class="cs_portfolio_thumbnail cs_zoom">
-                            <img class="cs_zoom_in w-100" src="@Url.Content(Model.Experience.ImageUrl)" alt="">
+                    <div class="portfolio style_2 position-relative">
+                        <a href="@Url.Content(Model.Experience.ImageUrl)" target="_blank" class="portfolio_thumbnail zoom">
+                            <img class="zoom_in w-100" src="@Url.Content(Model.Experience.ImageUrl)" alt="">
                         </a>
                     </div>
                 </div>

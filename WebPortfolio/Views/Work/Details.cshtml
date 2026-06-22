@@ -1,11 +1,11 @@
 ﻿@model WebPortfolio.Models.WorkExperience
 
 <!-- Start Hero Section -->
-<section class="cs_hero cs_style_3 cs_type_2 cs_filled_bg  text-center" style="background-image: url('@Url.Content("~/images/bg/hero_bg_5.svg")');">
+<section class="hero style_3 type_2 filled_bg  text-center" style="background-image: url('@Url.Content("~/images/bg/hero_bg_5.svg")');">
     <div class="container">
-        <div class="cs_height_150 cs_height_lg_150"></div>
-        <div class="cs_height_60 cs_height_lg_30"></div>
-        <h1 class="cs_hero_title cs_font_92 cs_extra_bold wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.2s; animation-name: fadeInUp;"><span class="cs_gradient_text_2">@Model.Title</span></h1>
+        <div class="height_150 height_lg_150"></div>
+        <div class="height_60 height_lg_30"></div>
+        <h1 class="hero_title font_92 extra_bold wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.2s; animation-name: fadeInUp;"><span class="gradient_text_2">@Model.Title</span></h1>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/work">Work</a></li>
             <li class="breadcrumb-item active">Details</li>
@@ -15,10 +15,10 @@
 <!-- Start Hero Section -->
 <!--Start imagebox Section-->
 <div class="container">
-    <div class="cs_image_box cs_style_5 cs_radius_15">
-        <img class="cs_radius_10 w-100" src="@Url.Content(Model.ImageUrl)" alt="project-details">
+    <div class="image_box style_5 radius_15">
+        <img class="radius_10 w-100" src="@Url.Content(Model.ImageUrl)" alt="project-details">
     </div>
-    <div class="cs_height_45 cs_height_lg_30"></div>
+    <div class="height_45 height_lg_30"></div>
 </div>
 <!--End imagebox Section-->
 <!--Start Postfolio Details Section-->
@@ -26,50 +26,50 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3">
-                <div class="cs_category cs_style_2 cs_white_bg cs_radius_10">
-                    <ul class="cs_mp_0">
-                        <li class="cs_font_20 cs_semi_bold">Duration:</li>
+                <div class="category style_2 white_bg radius_10">
+                    <ul class="mp_0">
+                        <li class="font_20 semi_bold">Duration:</li>
                         <li>@Model.Date</li>
-                        <li class="cs_font_20 cs_semi_bold">Location:</li>
+                        <li class="font_20 semi_bold">Location:</li>
                         <li>@Model.Company.Location</li>
-                        <li class="cs_font_20 cs_semi_bold">Type:</li>
+                        <li class="font_20 semi_bold">Type:</li>
                         <li>@Model.Type</li>
                     </ul>
                 </div>
-                <div class="cs_height_lg_30"></div>
+                <div class="height_lg_30"></div>
             </div>
             <div class="col-lg-9">
-                <div class="cs_pl_70">
-                    <div class="cs_portfoli_details cs_style_1">
-                        <h2 class="cs_portfolio_title cs_font_48">Overview</h2>
-                        <p class="cs_portfolio_text">
+                <div class="pl_70">
+                    <div class="portfoli_details style_1">
+                        <h2 class="portfolio_title font_48">Overview</h2>
+                        <p class="portfolio_text">
                             @Model.Description
                         </p>
-                        <div class="cs_portfolio_details_wrap">
-                            <h4 class="cs_font_20">Contributions</h4>
+                        <div class="portfolio_details_wrap">
+                            <h4 class="font_20">Contributions</h4>
                             <ul>
 
                                 @foreach (var contribution in Model.Contributions)
                                 {
                                     <li>
-                                        <p class="cs_portfolio_text">@contribution</p>
+                                        <p class="portfolio_text">@contribution</p>
                                     </li>
                                 }
                             </ul>
                         </div>                        
-                        <div class="cs_portfolio_details_wrap">
-                            <h4 class="cs_font_20">Technology</h4>
+                        <div class="portfolio_details_wrap">
+                            <h4 class="font_20">Technology</h4>
                             <div class="row row-cols-4 row-cols-lg-3">
                                 @foreach (var technology in Model.Technologies)
                                 {
                                     <div class="col">
-                                        <p class="cs_portfolio_text">@technology</p>
+                                        <p class="portfolio_text">@technology</p>
                                     </div>
                                 }
                             </div>
                         </div>                        
-                        <h4 class="cs_font_20">Company</h4>
-                        <p class="cs_portfolio_text">
+                        <h4 class="font_20">Company</h4>
+                        <p class="portfolio_text">
                             @Model.Company.Name
                         </p>
                         @{
@@ -82,6 +82,6 @@
             </div>
         </div>
     </div>
-    <div class="cs_height_145 cs_height_lg_75"></div>
+    <div class="height_145 height_lg_75"></div>
 </section>
 <!--End Postfolio Details Section-->

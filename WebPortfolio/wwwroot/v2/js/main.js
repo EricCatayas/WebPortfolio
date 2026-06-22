@@ -64,25 +64,25 @@
       1. Preloader
     --------------------------------------------------------------*/
     function preloader() {
-        $('.cs_preloader_in').fadeOut();
-        $('.cs_preloader').delay(150).fadeOut('slow');
+        $('.preloader_in').fadeOut();
+        $('.preloader').delay(150).fadeOut('slow');
     }
 
     /*--------------------------------------------------------------
       2. Mobile Menu
     --------------------------------------------------------------*/
     function mainNav() {
-        $('.cs_nav').append('<span class="cs_menu_toggle"><span></span></span>');
+        $('.nav').append('<span class="menu_toggle"><span></span></span>');
         $('.menu-item-has-children').append(
-            '<span class="cs_menu_dropdown_toggle"></span>',
+            '<span class="menu_dropdown_toggle"></span>',
         );
-        $('.cs_menu_toggle').on('click', function () {
+        $('.menu_toggle').on('click', function () {
             $(this)
-                .toggleClass('cs_toggle_active')
-                .siblings('.cs_nav_list')
+                .toggleClass('toggle_active')
+                .siblings('.nav_list')
                 .slideToggle();
         });
-        $('.cs_menu_dropdown_toggle').on('click', function () {
+        $('.menu_dropdown_toggle').on('click', function () {
             $(this).toggleClass('active').siblings('ul').slideToggle();
             $(this).parent().toggleClass('active');
         });
@@ -94,24 +94,24 @@
     function stickyHeader() {
         var $window = $(window);
         var lastScrollTop = 0;
-        var $header = $('.cs_sticky_header');
+        var $header = $('.sticky_header');
         var headerHeight = $header.outerHeight() + 30;
 
         $window.scroll(function () {
             var windowTop = $window.scrollTop();
 
             if (windowTop >= headerHeight) {
-                $header.addClass('cs_gescout_sticky');
+                $header.addClass('gescout_sticky');
             } else {
-                $header.removeClass('cs_gescout_sticky');
-                $header.removeClass('cs_gescout_show');
+                $header.removeClass('gescout_sticky');
+                $header.removeClass('gescout_show');
             }
 
-            if ($header.hasClass('cs_gescout_sticky')) {
+            if ($header.hasClass('gescout_sticky')) {
                 if (windowTop < lastScrollTop) {
-                    $header.addClass('cs_gescout_show');
+                    $header.addClass('gescout_show');
                 } else {
-                    $header.removeClass('cs_gescout_show');
+                    $header.removeClass('gescout_show');
                 }
             }
 
@@ -135,25 +135,25 @@
       5. Isotop Initialize
     --------------------------------------------------------------*/
     function isotopInit() {
-        if ($.exists('.cs_isotop')) {
-            $('.cs_isotop').isotope({
-                itemSelector: '.cs_isotop_item',
+        if ($.exists('.isotop')) {
+            $('.isotop').isotope({
+                itemSelector: '.isotop_item',
                 transitionDuration: '0.60s',
                 percentPosition: true,
                 masonry: {
-                    columnWidth: '.cs_grid_sizer',
+                    columnWidth: '.grid_sizer',
                 },
             });
             /* Active Class of Portfolio*/
-            $('.cs_isotop_filter ul li').on('click', function (event) {
+            $('.isotop_filter ul li').on('click', function (event) {
                 $(this).siblings('.active').removeClass('active');
                 $(this).addClass('active');
                 event.preventDefault();
             });
             /*=== Portfolio filtering ===*/
-            $('.cs_isotop_filter ul').on('click', 'a', function () {
+            $('.isotop_filter ul').on('click', 'a', function () {
                 var filterElement = $(this).attr('data-filter');
-                $('.cs_isotop').isotope({
+                $('.isotop').isotope({
                     filter: filterElement,
                 });
             });
@@ -195,9 +195,9 @@
       7. Tabs
     --------------------------------------------------------------*/
     function tabs() {
-        $('.cs_tabs .cs_tab_links a').on('click', function (e) {
+        $('.tabs .tab_links a').on('click', function (e) {
             var currentAttrValue = $(this).attr('href');
-            $('.cs_tabs ' + `[data-id="${currentAttrValue}"]`)
+            $('.tabs ' + `[data-id="${currentAttrValue}"]`)
                 .fadeIn(400)
                 .siblings()
                 .hide();
@@ -232,9 +232,9 @@
       9. Progress Bar
     --------------------------------------------------------------*/
     function progressBar() {
-        $('.cs_progress').each(function () {
+        $('.progress').each(function () {
             var progressPercentage = $(this).data('progress') + '%';
-            $(this).find('.cs_progress_in').css('width', progressPercentage);
+            $(this).find('.progress_in').css('width', progressPercentage);
         });
     }
 
@@ -242,15 +242,15 @@
       10. Cursor Animation
     --------------------------------------------------------------*/
     $(function () {
-        $('body').append('<span class="cs_cursor_lg d"></span>');
-        $('body').append('<span class="cs_cursor_sm"></span>');
+        $('body').append('<span class="cursor_lg d"></span>');
+        $('body').append('<span class="cursor_sm"></span>');
         $('a, button').on('mouseenter', function () {
-            $('.cs_cursor_lg').addClass('opacity-0');
-            $('.cs_cursor_sm').addClass('opacity-0');
+            $('.cursor_lg').addClass('opacity-0');
+            $('.cursor_sm').addClass('opacity-0');
         });
         $('a, button').on('mouseleave', function () {
-            $('.cs_cursor_lg').removeClass('opacity-0');
-            $('.cs_cursor_sm').removeClass('opacity-0');
+            $('.cursor_lg').removeClass('opacity-0');
+            $('.cursor_sm').removeClass('opacity-0');
         });
     });
     function cursorMovingAnimation(event) {
@@ -263,11 +263,11 @@
             });
 
             timing
-                .to('.cs_cursor_lg', {
+                .to('.cursor_lg', {
                     ease: 'power2.out',
                 })
                 .to(
-                    '.cs_cursor_sm',
+                    '.cursor_sm',
                     {
                         ease: 'power2.out',
                     },

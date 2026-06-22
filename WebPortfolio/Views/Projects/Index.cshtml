@@ -1,9 +1,9 @@
 ﻿@model IEnumerable<WebPortfolio.Models.Project>
 
-<section class="cs_hero cs_style_3 cs_filled_bg cs_center text-center" style="background-image: url('@Url.Content("~/images/bg/hero_bg_5.svg")');">
+<section class="hero style_3 filled_bg center text-center" style="background-image: url('@Url.Content("~/images/bg/hero_bg_5.svg")');">
     <div class="container">
-        <div class="cs_height_45 cs_height_lg_45"></div>
-        <h1 class="cs_hero_title cs_font_92 cs_extra_bold wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.2s; animation-name: fadeInUp;"><span class="cs_gradient_text_2">Projects</span></h1>
+        <div class="height_45 height_lg_45"></div>
+        <h1 class="hero_title font_92 extra_bold wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.2s; animation-name: fadeInUp;"><span class="gradient_text_2">Projects</span></h1>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item active">Projects</li>
@@ -12,16 +12,16 @@
 </section>
 <!-- End Hero Section -->
 <!-- Start Portfolio Section -->
-<section class="cs_filled_bg" style="background-image: url('@Url.Content("~/images/bg/hero_bg_2.svg")');">
-    <div class="cs_height_150 cs_height_lg_80"></div>
+<section class="filled_bg" style="background-image: url('@Url.Content("~/images/bg/hero_bg_2.svg")');">
+    <div class="height_150 height_lg_80"></div>
     <div class="container">
-        <div class="cs_isotop cs_isotop_col_2 cs_has_gutter_80" style="position: relative; height: 1426.3px;">
-            <div class="cs_grid_sizer"></div>
+        <div class="isotop isotop_col_2 has_gutter_80" style="position: relative; height: 1426.3px;">
+            <div class="grid_sizer"></div>
             @foreach (var project in Model)
             {
                 <partial name="_ProjectCard" model="project" />
             }
         </div>
     </div>
-    <div class="cs_height_150 cs_height_lg_80"></div>
+    <div class="height_150 height_lg_80"></div>
 </section>

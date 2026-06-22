@@ -10,11 +10,11 @@
     <div class="row">
         <div class="col-12 col-lg-4 align-self-center">
             <div class="carousel-content ps-lg-3 text-lg-start">
-                <h3 class="cs_accent_color_2 cs_semi_bold">@Model.Title</h3>
-                <h5 class="cs_secondary_color">@Model.Date</h5>
-                <h5 class="cs_accent_color cs_accent_color_2_hover"><a href="@Model.Company.Link" target="_blank">@Model.Company.Name</a></h5>
+                <h3 class="accent_color_2 semi_bold">@Model.Title</h3>
+                <h5 class="secondary_color">@Model.Date</h5>
+                <h5 class="accent_color accent_color_2_hover"><a href="@Model.Company.Link" target="_blank">@Model.Company.Name</a></h5>
                 <p>@description</p>
-                <a class="cs_btn cs_style_1" href="@Url.Content($"work/{Model.Id}")">
+                <a class="btn style_1" href="@Url.Content($"work/{Model.Id}")">
                     Read More
                 </a>
             </div>
