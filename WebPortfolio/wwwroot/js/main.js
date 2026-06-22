@@ -39,7 +39,6 @@ jQuery(document).ready(function ($) {
     /*---------------------------------------------*
      * Carousel
      ---------------------------------------------*/
-    setTimeout(function () {
         var carousel = function () {
             $('.featured-carousel').owlCarousel({
                 loop: true,
@@ -66,6 +65,7 @@ jQuery(document).ready(function ($) {
                 }
             });
         };
+    setTimeout(function () {
         carousel();
     }, 500);
 
@@ -98,7 +98,7 @@ jQuery(document).ready(function ($) {
             "company": "Efficientrix IT Solutions",
             "link": "https://efficientrix.com/",
             "content": "As part of our curriculumn, I took a Quality Assurance internship at Efficientrix IT Solutions. During this time, we worked on a beauty contest voting application. I gained experience in testing, identifying, and reporting bugs in a team environment.",
-            "contributions": "<li>Conducted manual testing of web applications to identify and report bugs</li><li>Collaborated with development team using ClickUp to resolve identified issues</li>",
+            "contributions": "<li>Conducted manual testing of web applications to identify and report bugs</li><li>Collaborated with a team of developers to test features for a beauty contest voting system</li>",
             "technologies": "<li>ClickUp</li><li>Laravel</li>"
         }
     };
