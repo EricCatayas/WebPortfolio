@@ -137,7 +137,7 @@
     function isotopInit() {
         if ($.exists('.cs_isotop')) {
             $('.cs_isotop').isotope({
-                itemSelector: '.cs_isotope_item',
+                itemSelector: '.cs_isotop_item',
                 transitionDuration: '0.60s',
                 percentPosition: true,
                 masonry: {
@@ -145,13 +145,13 @@
                 },
             });
             /* Active Class of Portfolio*/
-            $('.cs_isotope_filter ul li').on('click', function (event) {
+            $('.cs_isotop_filter ul li').on('click', function (event) {
                 $(this).siblings('.active').removeClass('active');
                 $(this).addClass('active');
                 event.preventDefault();
             });
             /*=== Portfolio filtering ===*/
-            $('.cs_isotope_filter ul').on('click', 'a', function () {
+            $('.cs_isotop_filter ul').on('click', 'a', function () {
                 var filterElement = $(this).attr('data-filter');
                 $('.cs_isotop').isotope({
                     filter: filterElement,

@@ -4457,7 +4457,7 @@ hr {
 /*--------------------------------------------------------------
   18. Isotope
 ----------------------------------------------------------------*/
-.cs_isotope {
+.cs_isotop {
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
@@ -4468,7 +4468,7 @@ hr {
         margin-bottom: -40px;
     }
 
-        .cs_isotop.cs_has_gutter_40 .cs_isotope_item {
+        .cs_isotop.cs_has_gutter_40 .cs_isotop_item {
             padding: 0 20px;
             margin-bottom: 40px;
         }
@@ -4479,7 +4479,7 @@ hr {
         margin-bottom: -80px;
     }
 
-        .cs_isotop.cs_has_gutter_80 .cs_isotope_item {
+        .cs_isotop.cs_has_gutter_80 .cs_isotop_item {
             padding: 0 40px;
             margin-bottom: 80px;
         }
@@ -4494,8 +4494,8 @@ hr {
         margin-bottom: -24px;
     }
 
-        .cs_isotop.cs_has_gutter_40 .cs_isotope_item,
-        .cs_isotop.cs_has_gutter_80 .cs_isotope_item {
+        .cs_isotop.cs_has_gutter_40 .cs_isotop_item,
+        .cs_isotop.cs_has_gutter_80 .cs_isotop_item {
             padding: 0 12px;
             margin-bottom: 24px;
         }
@@ -4507,38 +4507,38 @@ hr {
     margin-bottom: -40px;
 }
 
-    .cs_isotop.cs_has_gutter_100 .cs_isotope_item {
+    .cs_isotop.cs_has_gutter_100 .cs_isotop_item {
         padding: 0 50px;
         margin-bottom: 40px;
     }
 
-.cs_isotope_col_6 .cs_grid_sizer,
-.cs_isotope_col_6 .cs_isotope_item {
+.cs_isotop_col_6 .cs_grid_sizer,
+.cs_isotop_col_6 .cs_isotop_item {
     width: 16.666667%;
 }
 
-.cs_isotope_col_5 .cs_grid_sizer,
-.cs_isotope_col_5 .cs_isotope_item {
+.cs_isotop_col_5 .cs_grid_sizer,
+.cs_isotop_col_5 .cs_isotop_item {
     width: 20%;
 }
 
-.cs_isotope_col_4 .cs_grid_sizer,
-.cs_isotope_col_4 .cs_isotope_item {
+.cs_isotop_col_4 .cs_grid_sizer,
+.cs_isotop_col_4 .cs_isotop_item {
     width: 25%;
 }
 
-.cs_isotope_col_3 .cs_grid_sizer,
-.cs_isotope_col_3 .cs_isotope_item {
+.cs_isotop_col_3 .cs_grid_sizer,
+.cs_isotop_col_3 .cs_isotop_item {
     width: 33.333333%;
 }
 
-.cs_isotope_col_2 .cs_grid_sizer,
-.cs_isotope_col_2 .cs_isotope_item {
+.cs_isotop_col_2 .cs_grid_sizer,
+.cs_isotop_col_2 .cs_isotop_item {
     width: 50%;
 }
 
-.cs_isotope_col_1 .cs_grid_sizer,
-.cs_isotope_col_1 .cs_isotope_item {
+.cs_isotop_col_1 .cs_grid_sizer,
+.cs_isotop_col_1 .cs_isotop_item {
     width: 100%;
 }
 
@@ -4546,69 +4546,69 @@ hr {
     width: 33.333333%;
 }
 
-.cs_isotope_col_5 .cs_w20,
-.cs_isotope_col_4 .cs_w20,
-.cs_isotope_col_3 .cs_w20,
-.cs_isotope_col_2 .cs_w20,
-.cs_isotope_col_1 .cs_w20 {
+.cs_isotop_col_5 .cs_w20,
+.cs_isotop_col_4 .cs_w20,
+.cs_isotop_col_3 .cs_w20,
+.cs_isotop_col_2 .cs_w20,
+.cs_isotop_col_1 .cs_w20 {
     width: 20%;
 }
 
-.cs_isotope_col_5 .cs_w25,
-.cs_isotope_col_4 .cs_w25,
-.cs_isotope_col_3 .cs_w25,
-.cs_isotope_col_2 .cs_w25,
-.cs_isotope_col_1 .cs_w25 {
+.cs_isotop_col_5 .cs_w25,
+.cs_isotop_col_4 .cs_w25,
+.cs_isotop_col_3 .cs_w25,
+.cs_isotop_col_2 .cs_w25,
+.cs_isotop_col_1 .cs_w25 {
     width: 25%;
 }
 
-.cs_isotope_col_5 .cs_w33,
-.cs_isotope_col_4 .cs_w33,
-.cs_isotope_col_3 .cs_w33,
-.cs_isotope_col_2 .cs_w33,
-.cs_isotope_col_1 .cs_w33 {
+.cs_isotop_col_5 .cs_w33,
+.cs_isotop_col_4 .cs_w33,
+.cs_isotop_col_3 .cs_w33,
+.cs_isotop_col_2 .cs_w33,
+.cs_isotop_col_1 .cs_w33 {
     width: 33.333333%;
 }
 
-.cs_isotope_col_5 .cs_w50,
-.cs_isotope_col_4 .cs_w50,
-.cs_isotope_col_3 .cs_w50,
-.cs_isotope_col_2 .cs_w50,
-.cs_isotope_col_1 .cs_w50 {
+.cs_isotop_col_5 .cs_w50,
+.cs_isotop_col_4 .cs_w50,
+.cs_isotop_col_3 .cs_w50,
+.cs_isotop_col_2 .cs_w50,
+.cs_isotop_col_1 .cs_w50 {
     width: 50%;
 }
 
-.cs_isotope_col_5 .cs_w66,
-.cs_isotope_col_4 .cs_w66,
-.cs_isotope_col_3 .cs_w66,
-.cs_isotope_col_2 .cs_w66,
-.cs_isotope_col_1 .cs_w66 {
+.cs_isotop_col_5 .cs_w66,
+.cs_isotop_col_4 .cs_w66,
+.cs_isotop_col_3 .cs_w66,
+.cs_isotop_col_2 .cs_w66,
+.cs_isotop_col_1 .cs_w66 {
     width: 66.666666%;
 }
 
-.cs_isotope_col_5 .cs_w100,
-.cs_isotope_col_4 .cs_w100,
-.cs_isotope_col_3 .cs_w100,
-.cs_isotope_col_2 .cs_w100,
-.cs_isotope_col_1 .cs_w100 {
+.cs_isotop_col_5 .cs_w100,
+.cs_isotop_col_4 .cs_w100,
+.cs_isotop_col_3 .cs_w100,
+.cs_isotop_col_2 .cs_w100,
+.cs_isotop_col_1 .cs_w100 {
     width: 100%;
 }
 
-.cs_isotope_filter.cs_style1 li {
+.cs_isotop_filter.cs_style1 li {
     margin-top: 10px;
 }
 
-    .cs_isotope_filter.cs_style1 li:not(:last-child) {
+    .cs_isotop_filter.cs_style1 li:not(:last-child) {
         margin-right: 28px;
     }
 
-.cs_isotope_filter.cs_style1 a {
+.cs_isotop_filter.cs_style1 a {
     display: inline-block;
     position: relative;
     padding-bottom: 10px;
 }
 
-    .cs_isotope_filter.cs_style1 a::before {
+    .cs_isotop_filter.cs_style1 a::before {
         content: "";
         height: 9px;
         width: 9px;
@@ -4624,7 +4624,7 @@ hr {
         transform: scale(0);
     }
 
-.cs_isotope_filter.cs_style1 ul {
+.cs_isotop_filter.cs_style1 ul {
     border-bottom: 1px solid #999696;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -4636,17 +4636,17 @@ hr {
     justify-content: flex-start;
 }
 
-.cs_isotope_filter.cs_style1 .active a {
+.cs_isotop_filter.cs_style1 .active a {
     color: #ff6d5a;
 }
 
-    .cs_isotope_filter.cs_style1 .active a::before {
+    .cs_isotop_filter.cs_style1 .active a::before {
         -webkit-transform: scale(1);
         transform: scale(1);
     }
 
 @media screen and (max-width: 1199px) {
-    .cs_isotop.cs_has_gutter_100 .cs_isotope_item {
+    .cs_isotop.cs_has_gutter_100 .cs_isotop_item {
         padding: 0 20px;
         margin-bottom: 40px;
     }
@@ -4663,87 +4663,87 @@ hr {
         margin-bottom: -40px;
     }
 
-        .cs_isotop.cs_has_gutter_80 .cs_isotope_item {
+        .cs_isotop.cs_has_gutter_80 .cs_isotop_item {
             padding: 0 20px;
             margin-bottom: 40px;
         }
 
-    .cs_isotope_col_4 .cs_grid_sizer,
-    .cs_isotope_col_4 .cs_isotope_item {
+    .cs_isotop_col_4 .cs_grid_sizer,
+    .cs_isotop_col_4 .cs_isotop_item {
         width: 33.333333%;
     }
 }
 
 @media screen and (max-width: 991px) {
-    .cs_isotope_col_4 .cs_grid_sizer,
-    .cs_isotope_col_4 .cs_isotope_item {
+    .cs_isotop_col_4 .cs_grid_sizer,
+    .cs_isotop_col_4 .cs_isotop_item {
         width: 50%;
     }
 
-    .cs_isotope_col_4 .cs_w50 {
+    .cs_isotop_col_4 .cs_w50 {
         width: 100%;
     }
 
-    .cs_isotope_col_3 .cs_grid_sizer,
-    .cs_isotope_col_3 .cs_isotope_item {
+    .cs_isotop_col_3 .cs_grid_sizer,
+    .cs_isotop_col_3 .cs_isotop_item {
         width: 50%;
     }
 
-    .cs_isotope_col_2 .cs_grid_sizer,
-    .cs_isotope_col_2 .cs_isotope_item {
+    .cs_isotop_col_2 .cs_grid_sizer,
+    .cs_isotop_col_2 .cs_isotop_item {
         width: 50%;
     }
 }
 
 @media screen and (max-width: 767px) {
-    .cs_isotope_col_5 .cs_w50,
-    .cs_isotope_col_4 .cs_w50,
-    .cs_isotope_col_3 .cs_w50,
-    .cs_isotope_col_2 .cs_w50,
-    .cs_isotope_col_1 .cs_w50,
-    .cs_isotope_col_5 .cs_w66,
-    .cs_isotope_col_4 .cs_w66,
-    .cs_isotope_col_3 .cs_w66,
-    .cs_isotope_col_2 .cs_w66,
-    .cs_isotope_col_1 .cs_w66 {
+    .cs_isotop_col_5 .cs_w50,
+    .cs_isotop_col_4 .cs_w50,
+    .cs_isotop_col_3 .cs_w50,
+    .cs_isotop_col_2 .cs_w50,
+    .cs_isotop_col_1 .cs_w50,
+    .cs_isotop_col_5 .cs_w66,
+    .cs_isotop_col_4 .cs_w66,
+    .cs_isotop_col_3 .cs_w66,
+    .cs_isotop_col_2 .cs_w66,
+    .cs_isotop_col_1 .cs_w66 {
         width: 100%;
     }
 
-    .cs_isotope_col_5 .cs_grid_sizer,
-    .cs_isotope_col_5 .cs_isotope_item {
+    .cs_isotop_col_5 .cs_grid_sizer,
+    .cs_isotop_col_5 .cs_isotop_item {
         width: 100%;
     }
 
-    .cs_isotope_col_4 .cs_grid_sizer,
-    .cs_isotope_col_4 .cs_isotope_item {
+    .cs_isotop_col_4 .cs_grid_sizer,
+    .cs_isotop_col_4 .cs_isotop_item {
         width: 100%;
     }
 
-    .cs_isotope_col_3 .cs_grid_sizer,
-    .cs_isotope_col_3 .cs_isotope_item {
+    .cs_isotop_col_3 .cs_grid_sizer,
+    .cs_isotop_col_3 .cs_isotop_item {
         width: 100%;
     }
 
-    .cs_isotope_col_2 .cs_grid_sizer,
-    .cs_isotope_col_2 .cs_isotope_item {
+    .cs_isotop_col_2 .cs_grid_sizer,
+    .cs_isotop_col_2 .cs_isotop_item {
         width: 100%;
     }
 }
 
 @media screen and (max-width: 575px) {
-    .cs_isotope_filter.cs_style1 ul {
+    .cs_isotop_filter.cs_style1 ul {
         border: none;
     }
 
-    .cs_isotope_filter.cs_style1 li {
+    .cs_isotop_filter.cs_style1 li {
         margin-bottom: 8px;
     }
 
-        .cs_isotope_filter.cs_style1 li:not(:last-child) {
+        .cs_isotop_filter.cs_style1 li:not(:last-child) {
             margin-right: 20px;
         }
 
-    .cs_isotope_filter.cs_style1 a {
+    .cs_isotop_filter.cs_style1 a {
         padding-bottom: 3px;
     }
 }
