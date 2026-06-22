@@ -1,0 +1,602 @@
+﻿@{
+    Layout = null;
+}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Eric Jay</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" href="~/images/eric-jay-64.jpg" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="~/css/fonticons.css">
+    <link rel="stylesheet" href="~/fonts/stylesheet.css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/scroll-down.css">
+
+    <link rel="stylesheet" href="~/css/carousel.css">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
+
+
+    <!--For Plugins external css-->
+    <link rel="stylesheet" href="~/css/plugins.css" />
+
+    <!--Theme custom css -->
+    <link rel="stylesheet" href="~/css/style.css">
+
+    <!--Theme Responsive css-->
+    <link rel="stylesheet" href="~/css/responsive.css" />
+
+    <script src="~/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+<body data-spy="scroll" data-target=".navbar-collapse">
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header id="main_menu" class="header navbar-fixed-top">
+        <div class="main_menu_bg">
+            <div class="container">
+                <div class="row">
+                    <div class="nave_menu">
+                        <nav class="navbar navbar-default" id="navmenu">
+                            <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" href="#home">
+                                        <h4 style="font-family:'Roboto', Arial, sans-serif;font-weight: 700;letter-spacing: 2px;color:white;text-transform: uppercase;">Eric Jay</h4>
+                                    </a>
+                                </div>
+
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="#home">Home</a></li>
+                                        <li><a href="#work">Experience</a></li>
+                                        <li><a href="#projects">Projects</a></li>
+                                        <li><a href="#about">About</a></li>
+                                        <li><a href="#contact">Contact</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Landing Page -->
+    <section id="home" class="home">
+        <div class="overlay">
+            <div class="container home-container">
+                <div class="row home-row">
+
+                    <!-- Left content -->
+                    <div class="col-sm-6 home-content home-header">
+                            <div class="main_home wow fadeInLeft" data-wow-duration="700ms">
+                                <h1>Eric Jay Catayas</h1>
+                                <p class="subtitle">Fullstack Web Developer</p>
+                            </div>
+                    </div>
+
+                    <!-- Profile image -->
+                    <div class="col-sm-6 home-content">
+                        <div class="profile-wrapper wow fadeInRight" data-wow-duration="700ms">
+                            <div class="profile-bg"></div>
+                            <img src="~/images/Landing Photo.png"
+                                 class="profile-image"
+                                 alt="Eric Jay Catayas">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <svg id="more-arrows">
+            <polygon class="arrow-top" points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 " />
+            <polygon class="arrow-middle" points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 " />
+            <polygon class="arrow-bottom" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 " />
+        </svg>
+    </section>
+
+    <!-- Work History Modal -->
+    <div class="modal fade" id="workExpModal" tabindex="-1" role="dialog" aria-labelledby="workExpModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="workExpModalLabel"></h4>
+                    <h5 id="modalDate"></h5>
+                    <h6><a id="modalCompanyLink" href="" target="_blank"></a></h6>
+                </div>
+                <div class="modal-body">
+                    <div class="work-history-modal">
+                        <p id="modalContent"></p>
+                        <h6>Contributions:</h6>
+                        <ul id="modalContributions"></ul>
+                        <h6>Technologies Used:</h6>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <ul id="modalTechnologies"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-small" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Frameworks and Tools -->
+    <section id="service" class="service">
+        <div class="container">
+            <div class="row">
+                <div class="main_service_area sections">
+                    <div class="col-sm-6">
+                        <div class="single_service_left wow fadeInLeft" data-wow-duration="700ms">
+                            <h2>
+                                Frameworks &
+                                Tools
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="single_service_right wow fadeInRight" data-wow-duration="900ms">
+                            <div class="row single_service_row">
+                                <div class="col-xs-6 single_service">
+                                    <div class="single_service_icon">
+                                        <img src="~/images/logo/react.png" />
+                                    </div>
+                                    <div class="single_service_content">
+                                        <h4>React</h4>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 single_service">
+                                    <div class="single_service_icon">
+                                        <img src="~/images/logo/vue.js.png" />
+                                    </div>
+                                    <div class="single_service_content">
+                                        <h4>Vue.Js</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row single_service_row">
+                                <div class="col-xs-6 single_service">
+                                    <div class="single_service_icon">
+                                        <img src="~/images/logo/aspnetcore.png" />
+                                    </div>
+                                    <div class="single_service_content">
+                                        <h4>ASP .NET Core</h4>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 single_service">
+                                    <div class="single_service_icon">
+                                        <img src="~/images/logo/next-js.png" />
+                                    </div>
+                                    <div class="single_service_content">
+                                        <h4>Next.Js</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row single_service_row">
+                                <div class="col-xs-6 single_service">
+                                    <div class="single_service_icon">
+                                        <img src="~/images/logo/node-js.png" />
+                                    </div>
+                                    <div class="single_service_content">
+                                        <h4>Node.Js</h4>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 single_service">
+
+                                    <div class="single_service_icon">
+                                        <img src="~/images/logo/mysql.png" />
+                                    </div>
+                                    <div class="single_service_content">
+                                        <h4>MySQL</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section id="work" class="work text-center">
+        <div class="container">
+            <div class="head_title">
+                <h2>Work Experience</h2>
+                <h6>I started my professional career at the age of 20 as a self-taught and Computer Science undergraduate. These are the roles that have shaped my expertise in full-stack web development.</h6>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="featured-carousel owl-carousel">
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-12 col-lg-4 align-self-center">
+                                    <div class="carousel-content text-lg-start">
+                                        <h3>Full Stack Development Intern (500 hrs.)</h3>
+                                        <h5>June 2024 - August 2024</h5>
+                                        <h5><a href="https://mydreamvisa.com/" target="_blank">My Dream Visa LLC</a></h5>
+                                        <p>In the summer of 2024, I volunteered as a Full Stack Development Intern to enhance my skills and gain hands-on experience. During the internship, we developed an application that simplifies the USCIS marriage-based green card application process.</p>
+                                        <button type="button" class="btn btn-small btn-primary" data-toggle="modal" data-target="#workExpModal" data-role="mdv-intern">Read More</button>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-8 job-image-container">
+                                    <img class="img" src="~/images/work/mdv-certificate.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-12 col-lg-4 align-self-center">
+                                    <div class="carousel-content text-lg-start">
+                                        <h3>Part-time Full Stack Developer</h3>
+                                        <h5>September 2024 - June 2025</h5>
+                                        <h5><a href="https://mydreamvisa.com/" target="_blank">My Dream Visa LLC</a></h5>
+                                        <p>Following the completion of my internship, I was offered a part-time position as a Junior Full Stack Developer at My Dream Visa. In this role, I contributed to the development of new USCIS immigration services, including the Parent Green Card application, Form I-751, and Form I-129F.</p>
+                                        <button type="button" class="btn btn-small btn-primary" data-toggle="modal" data-target="#workExpModal" data-role="mdv-developer">Read More</button>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-8 job-image-container">
+                                    <img class="img" src="~/images/work/mdv-landing.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-12 col-lg-4 align-self-center">
+                                    <div class="carousel-content text-lg-start">
+                                        <h3>Quality Assurance Intern (250 hrs.)</h3>
+                                        <h5>July 2025 - October 2025</h5>
+                                        <h5><a href="https://efficientrix.com/" target="_blank">Efficientrix IT Solutions</a></h5>
+                                        <p>As part of our curriculumn, I took a Quality Assurance internship at Efficientrix IT Solutions. During this time, I gained experience in testing, identifying, and reporting bugs in a team environment.</p>
+                                        <button type="button" class="btn btn-small btn-primary" data-toggle="modal" data-target="#workExpModal" data-role="efficientrix-intern">Read More</button>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-8 job-image-container">
+                                    <img class="img" src="~/images/work/efficientrix-certificate.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Personal Projects -->
+    <section id="projects" class="portfolio sections text-center">
+        <div class="head_title">
+            <h2>Personal Projects</h2>
+            <h6>Click or hover to view description and links</h6>
+        </div>
+
+        <div class="container">
+            <div class="col">
+                    <div class="row">
+                        @* AgriStore *@
+                        <div class="col-md-6 mix no-padding">
+                            <div class="single_mixi_portfolio wow fadeInLeft" data-wow-duration="700ms">
+                            <img src="~/images/projects/agristore.jpg" alt="" />
+                                <h4>AgriStore</h4>
+                                <div class="mixi_portfolio_overlay">
+                                    <div class="overflow_hover_text">
+                                        <p>
+                                            This app is an online marketplace that facilitates exchange of agricultural products in the Philippines.
+                                            It is inspired from Agro-Market24, an international agricultural exchange platform based in Europe.
+                                        </p>
+                                        <div class="d-flex">
+                                            <a href="https://agristore-online.netlify.app" target="_blank"><i class="lnr">Visit</i></a>
+                                            <a href="https://github.com/EricCatayas/Farm-Ecommerce-React" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @* UP Cebu Exchange *@
+                        <div class="col-md-6 mix no-padding">
+                            <div class="single_mixi_portfolio wow fadeInRight" data-wow-duration="700ms">
+                                <img src="~/images/projects/up-cebu-exchange.png" alt="" />
+                                <h4>UP Cebu Exchange</h4>
+                                <div class="mixi_portfolio_overlay">
+                                    <div class="overflow_hover_text">
+                                        <p>
+                                            UP Cebu Exchange is a platform that provides rental services for artworks crafted by student Filipino artists
+                                            from the University of the Philippines Cebu. The project was developed using Next.Js and served as our capstone project during our final year in college.
+                                        </p>
+                                        <div class="d-flex">
+                                            <a href="https://up-cebu-exchange.vercel.app/" target="_blank"><i class="lnr">Visit</i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                    @* Virtubooks *@
+                    <div class="col-md-6 mix no-padding">
+                        <div class="single_mixi_portfolio wow fadeInRight" data-wow-duration="700ms">
+                            <img src="~/images/projects/virtubooks.png" alt="" />
+                            <h4>Virtubooks</h4>
+                            <div class="mixi_portfolio_overlay">
+                                <div class="overflow_hover_text">
+                                    <p>
+                                        Virtubooks provides a virtual notebook experience to make digital note-taking and writing more engaging and interactive. A small personal project that I developed to practice my skills in WordPress.
+                                    </p>
+                                    <div class="d-flex">
+                                        <a href="https://virtubooks.online" target="_blank"><i class="lnr">Visit</i></a>
+                                        <a href="https://github.com/EricCatayas/VirtubooksWP" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @* Tropical Campgrounds *@
+                    <div class="col-md-6 mix no-padding">
+                        <div class="single_mixi_portfolio wow fadeInRight" data-wow-duration="700ms">
+                            <img src="~/images/projects/tropical-campgrounds.jpg" alt="" />
+                            <h4>Tropical Campgrounds</h4>
+                            <div class="mixi_portfolio_overlay">
+                                <div class="overflow_hover_text">
+                                    <p>
+                                        A site for users to share reviews and their experiences on camping sites
+                                        throughout the Philippines. This app is inspired from Colt Steele's Yelp Camp app
+                                        from his 60 hr. Udemy course: The Complete Web Development Bootcamp 2023.
+                                    </p>
+                                    <div class="d-flex">
+                                        <a href="https://tropicalcampground.azurewebsites.net" target="_blank"><i class="lnr">Visit</i></a>
+                                        <a href="https://github.com/EricCatayas/TropicalCampgrounds" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+                    <div class="row">
+                    @* Contacts Management  *@
+                    <div class="col-md-6 mix no-padding">
+                        <div class="single_mixi_portfolio wow fadeInRight" data-wow-duration="700ms">
+                            <img src="~/images/projects/contacts-management.png" alt="" />
+                            <h4>Contacts Management</h4>
+                            <div class="mixi_portfolio_overlay">
+                                <div class="overflow_hover_text">
+                                    <p>
+                                        Contacts Management is a web app for organizing personal contacts, tracking logs, and managing important events or to-do lists. Developed using ASP .NET Core 7, this application embodies the principles of Clean Architecture, MVC, and Repository design pattern for scalability and modularity.
+                                    </p>
+                                    <div class="d-flex">
+                                        <a href="https://aspcontactsmanagement.azurewebsites.net" target="_blank"><i class="lnr">Visit</i></a>
+                                        <a href="https://github.com/EricCatayas/ContactsManagement" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        @* Travel Records App *@
+                        <div class="col-md-6 mix no-padding">
+                            <div class="single_mixi_portfolio wow fadeInLeft" data-wow-duration="700ms">
+                                <img src="~/images/projects/travel-records-app.png" alt="" />
+                                <h4>Travel Records App (Xamarin Forms Project)</h4>
+                                <div class="mixi_portfolio_overlay">
+                                    <div class="overflow_hover_text">
+                                        <p>This project was inspired from Eduardo Rosas' cross platform IOS and Android application using Xamarin Forms, a 27.5 hr. course in Udemy</p>
+                                        <div class="d-flex">
+                                            <a href="https://github.com/EricCatayas/TravelRecordApp" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="counter" class="counter">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="main_counter sections text-center">
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <div class="row">
+                                <div class="col-sm-4 col-xs-12">
+                                    <div class="single_counter_right">
+                                        <h4>Front-End</h4>
+                                        <p>React</p>
+                                        <p>Vue.js</p>
+                                        <p>Bootstrap</p>
+                                        <p>Tailwind CSS</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-xs-12">
+                                    <div class="single_counter_right">
+                                        <h4>Back-End</h4>
+                                        <p>ASP .NET Core</p>
+                                        <p>Express.js</p>
+                                        <p>Node.js</p>
+                                        <p>Next.js</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-xs-12">
+                                    <div class="single_counter_right">
+                                        <h4>Architecture / Design</h4>
+                                        <p>RESTful Architecture</p>
+                                        <p>MVC</p>
+                                        <p>Clean Architecture</p>
+                                        <p>Event Driven Architecture</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me-->
+
+    <section id="about" class="choose">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="main_choose_area sections">
+                    <div class="col-sm-7 col-sm-offset-1">
+                        <div class="main_choose_content text-left">
+                            <div class="single_choose_content wow fadeInLeft" data-wow-duration="1500ms">
+                                <h1>About Me</h1>
+                                <p>
+                                    I'm a Full Stack Web Developer with hands-on experience in designing, developing, and deploying web applications.
+                                    I was formerly a visual artist, but got hooked to web development because of the combination of architectural and design creativity.
+                                    If you have any questions or would like to discuss potential opportunities, please feel free to reach out.
+                                </p>
+                                <div class="d-flex flex-row">
+                                    <a href="https://github.com/EricCatayas" target="_blank" class="btn btn-larg mx-2">Github</a>
+                                    <a href="~/documents/Eric Jay Catayas Resume.pdf" target="_blank" class="btn btn-larg mx-2">Resume</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="main_contact sections">
+                    <div class="head_title text-center">
+                        <h2>Contact</h2>
+                        <p>Thanks for coming in! I'd be happy to hear from your thoughts.</p>
+                        <div id="mailResult"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="contact_contant">
+
+                            <div class="col-sm-6 col-xs-12">
+                                <h4>Leave A Message</h4>
+                                <div class="single_contant_left">
+                                    <form action="#" method="post" id="mailform">
+                                        <!--<div class="col-lg-8 col-md-8 col-sm-10 col-lg-offset-2 col-md-offset-2 col-sm-offset-1">-->
+
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="name" placeholder="Name" required="">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" name="recipientEmail" placeholder="Email" required="">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <textarea class="form-control" name="body" rows="8" placeholder="Message"></textarea>
+                                        </div>
+
+                                        <div class="">
+                                            <input type="submit" value="Send" class="btn btn-primary">
+                                        </div>
+                                        <!--</div>-->
+                                    </form>
+                                </div>
+                            </div>
+
+
+                            <div class="col-sm-5 col-sm-offset-1 col-xs-12">
+                                <div class="single_message_right_info">
+                                    <h4>Address :</h4>
+                                    <ul>
+                                        <li>
+                                            <a href="">
+                                                <i class="fa fa-home"></i> Gemelina St., Bogo City, 6010 Cebu
+                                            </a>
+                                        </li>
+                                        <li><a href=""><i class="fa fa-phone"></i> (+63)936 728 8737</a></li>
+
+                                        <li><a href=""><i class="fa fa-envelope"></i> catayasericjay@gmail.com</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> <!-- End of messsage contant-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    @*<footer id="footer" class="footer">
+        <div class="container">
+            <div class="main_footer">
+                <div class="row">*@
+
+    @*<div class="col-sm-6 col-xs-12">
+                        <div class="copyright_text">
+                            <p class=" wow fadeInRight" data-wow-duration="1s">Made with <i class="fa fa-heart"></i> by <a href="http://bootstrapthemes.co">Bootstrap Themes</a>2016. All Rights Reserved</p>
+                            <a href="<a href="https://www.flaticon.com/free-icons/3d-map" title="3d-map icons">3d-map icons created by Freepik - Flaticon</a>"class=" wow fadeInRight" data-wow-duration="1s">Special thanks to</a>2016. All Rights Reserved</a>
+                        </div>
+                    </div>*@
+
+    @*<div class="col-sm-6 col-xs-12">
+                        <div class="footer_socail">
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-google-plus"></i></a>
+                            <a href=""><i class="fa fa-rss"></i></a>
+                            <a href=""><i class="fa fa-instagram"></i></a>
+                            <a href=""><i class="fa fa-dribbble"></i></a>
+                            <a href=""><i class="fa fa-behance"></i></a>
+                        </div>
+                    </div>*@
+    @*</div>
+            </div>
+        </div>
+    </footer>*@
+
+
+
+    <!-- START SCROLL TO TOP  -->
+
+    <div class="scrollup">
+        <a href="#"><i class="fa fa-chevron-up"></i></a>
+    </div>
+
+
+    <script src="~/js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="~/js/vendor/bootstrap.min.js"></script>
+
+    <script src="~/js/jquery.easypiechart.min.js"></script>
+    <script src="~/js/jquery.mixitup.min.js"></script>
+    <script src="~/js/jquery.easing.1.3.js"></script>
+    <script src="~/js/plugins.js"></script>
+    <script src="~/js/main.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+
+    <script src="~/js/email-service.js"></script>
+
+</body>

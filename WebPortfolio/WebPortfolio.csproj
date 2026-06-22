@@ -13,10 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Shared\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="wwwroot\js\app.js" />
   </ItemGroup>
 

@@ -1,7 +1,9 @@
 ﻿using MailKit.Net.Smtp;
 using Microsoft.AspNetCore.Mvc;
 using MimeKit;
+using WebPortfolio.Data;
 using WebPortfolio.Services.EmailService;
+using WebPortfolio.ViewModels;
 
 namespace WebPortfolio.Controllers
 {
@@ -11,14 +13,36 @@ namespace WebPortfolio.Controllers
         private readonly IConfiguration _configuration;
         public HomeController(IEmailService emailService, IConfiguration configuration)
         {
-            //TODO Configure email in user secrets
             _emailService = emailService;
             _configuration = configuration;
         }
         [Route("/")]
         public IActionResult Index()
         {
-            return View();
+            var workExperiences = WorkExperienceData.Experiences;
+            workExperiences.Reverse();
+            string[] styles = { "position: absolute; left: 0%; top: 220.8px;", "position: absolute; left: 50%; top: 0px;", "position: absolute; left: 50%; top: 598.75px;" };
+            var projects = ProjectData.Projects.Take(3).Select((project, index) => new ProjectVM(project, styles[index])).ToList();
+            var viewModel = new HomeVM
+            {
+                WorkExperiences = workExperiences,
+                Projects = projects
+            };
+            return View("Index", viewModel);
+        }
+        [Route("/v1")]
+        public IActionResult V1()
+        {
+            return View("Old");
+        }
+        [Route("/about")]
+        public IActionResult About() {
+            return View("About");
+        }
+        [Route("/contact")]
+        public IActionResult Contact()
+        {
+            return View("Contact");
         }
         [Route("[controller]/[action]")]
         [HttpPost]
@@ -28,4 +52,5 @@ namespace WebPortfolio.Controllers
             return success ? StatusCode(200) : StatusCode(500);
         }
     }
+
 }
