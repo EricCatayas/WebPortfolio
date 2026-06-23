@@ -1879,6 +1879,14 @@ hr {
     color: #b5b5c0;
 }
 
+.gradient_text {
+    background: linear-gradient(147deg, #342ead 0%, #ff6d5a 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
 .gradient_text_2 {
     background: var(--gradient-1, linear-gradient(244deg, #8b85ff 0%, #ffeae8 100%));
     background-clip: text;
@@ -1886,12 +1894,11 @@ hr {
     -webkit-text-fill-color: transparent;
 }
 
-.gradient_text {
-    background: linear-gradient(147deg, #342ead 0%, #ff6d5a 100%);
+.gradient_text_3 {
+    background: var(--gradient-1, linear-gradient(244deg, #5d55f7 0%, #ff7c6f 100%));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: transparent;
 }
 
 .gradient_border_text {
