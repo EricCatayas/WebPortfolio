@@ -165,10 +165,13 @@
     --------------------------------------------------------------*/
 
     function carousel() {
-        $('.featured-carousel').owlCarousel({
+        var owl = $('.featured-carousel');
+        var autoplayTimeout = 20000;
+
+        owl.owlCarousel({
             loop: true,
             autoplay: true,
-            autoplayTimeout: 200000,
+            autoplayTimeout: autoplayTimeout,
             margin: 30,
             animateOut: 'fadeOut',
             animateIn: 'fadeIn',
@@ -189,6 +192,25 @@
                 }
             }
         });
+
+        // Reset autoplay timer when navigation buttons are clicked
+        owl.on('translated.owl.carousel', function(event) {
+            owl.trigger('stop.owl.autoplay');
+            owl.trigger('play.owl.autoplay', [autoplayTimeout]);
+            resetProgressBar();
+        });
+
+        // Initialize progress bar
+        function resetProgressBar() {
+            $('.carousel-progress-bar').stop().css('width', '0%').animate({
+                width: '100%'
+            }, autoplayTimeout, 'linear');
+        }
+
+        // Start progress bar animation on page load
+        setTimeout(function() {
+            resetProgressBar();
+        }, 100);
     };
 
     /*--------------------------------------------------------------
