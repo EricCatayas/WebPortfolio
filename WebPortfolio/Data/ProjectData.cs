@@ -77,7 +77,7 @@ namespace WebPortfolio.Data
             Id = "web-portfolio-v1",
             Title = "Old Web Portfolio",
             Description = "This is my old web portfolio built using ASP.NET Core 7 and Bootstrap -- same as this portfolio you're looking at! It landed me my first job as a web developer :D",
-            Link = "https://ericcatayas.azurewebsites.net/v1",
+            Link = "https://ericjay.azurewebsites.net/v1",
             GithubLink = "https://github.com/EricCatayas/WebPortfolio",
             ImageUrl = "~/images/projects/web-portfolio-v1.png",
             ThumbnailUrl = "~/images/projects/web-portfolio-v1.png"
