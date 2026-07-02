@@ -62,9 +62,35 @@
     </div>
 </section>
 <!-- End About Section -->
+<!-- Start Development Environment Section -->
+<section class="filled_bg" style="background-image: url('@Url.Content("~/images/bg/header_bg_3.png")');">
+    <div class="height_120 height_lg_70"></div>
+    <div class="container">
+        <div class="row align-items-center g-4 g-lg-5">
+            <div class="col-lg-6 order-2 order-lg-1">
+                <div class="about style_1 pr_50">
+                    <h3 class="about_title font_48 semi_bold mb_25">
+                        My Development <span class="accent_color">Environment</span>
+                    </h3>
+                    <p class="about_text mb_25">
+                        This is where most of my projects come to life. Whether I'm designing responsive interfaces, building REST APIs, or debugging application issues, I enjoy having a workspace that's organized and distraction-free.
+                    </p>
+                    <p class="about_text m-0">
+                        I believe a productive environment contributes to better software. My setup is designed to support long development sessions, continuous learning, and effective collaboration with remote teams.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2">
+                <div class="image_box radius_20 overflow-hidden wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                    <img class="w-100" src="@Url.Content("~/images/desk.jpg")" alt="My development workspace">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="height_40 height_lg_30"></div>
+</section>
+<!-- End Development Environment Section -->
+
 <!-- Start Skills Section -->
 @await Html.PartialAsync("_SkillsSection")
 <!-- End Skills Section -->
-<!--Start Contact Section-->
-@await Html.PartialAsync("_ContactForm")
-<!--End Contact Section-->
