@@ -19,17 +19,6 @@ namespace WebPortfolio.Data
 
         new Project
         {
-            Id = "tropical-campgrounds",
-            Title = "Tropical Campgrounds",
-            Description = "A site for users to share reviews and their experiences on camping sites throughout the Philippines. This app is inspired from Colt Steele's Yelp Camp app from his 60 hr. Udemy course: The Complete Web Development Bootcamp 2023.",
-            Link = "https://tropicalcampground.azurewebsites.net",
-            GithubLink = "https://github.com/EricCatayas/TropicalCampgrounds",
-            ImageUrl = "~/images/projects/tropical-campgrounds.jpg",
-            ThumbnailUrl = "~/images/projects/tropical-campgrounds-thumbnail.png"
-        },
-
-        new Project
-        {
             Id = "agristore",
             Title = "AgriStore",
             Description = "This app is an online marketplace that facilitates exchange of agricultural products in the Philippines. It is inspired from Agro-Market24, an international agricultural exchange platform based in Europe.",
@@ -41,6 +30,28 @@ namespace WebPortfolio.Data
 
         new Project
         {
+            Id = "virtubooks",
+            Title = "Virtubooks",
+            Description = "Virtubooks provides a virtual notebook experience to make digital note-taking and writing more engaging and interactive. A small personal project that I developed to practice my skills in WordPress.",
+            Link = "https://virtubooks-bcd8gddmhpehg7ep.southeastasia-01.azurewebsites.net",
+            GithubLink = "https://github.com/EricCatayas/VirtubooksWP",
+            ImageUrl = "~/images/projects/virtubooks.png",
+            ThumbnailUrl = "~/images/projects/virtubooks.png"
+        },
+
+        new Project
+        {
+            Id = "tropical-campgrounds",
+            Title = "Tropical Campgrounds",
+            Description = "A site for users to share reviews and their experiences on camping sites throughout the Philippines. This app is inspired from Colt Steele's Yelp Camp app from his 60 hr. Udemy course: The Complete Web Development Bootcamp 2023.",
+            Link = "https://tropicalcampground.azurewebsites.net",
+            GithubLink = "https://github.com/EricCatayas/TropicalCampgrounds",
+            ImageUrl = "~/images/projects/tropical-campgrounds.jpg",
+            ThumbnailUrl = "~/images/projects/tropical-campgrounds-thumbnail.png"
+        },
+
+        new Project
+        {
             Id = "farm-ecommerce-api",
             Title = "Farm Ecommerce API",
             Description = "This is a web API that serves as the backend for the AgriStore online marketplace. It is built using ASP.NET Core 7 and follows Clean Architecture principles for maintainability and scalability.",
@@ -48,17 +59,6 @@ namespace WebPortfolio.Data
             GithubLink = "https://github.com/EricCatayas/FarmEcommerce-WebAPI",
             ImageUrl = "~/images/projects/farm-ecommerce-api.png",
             ThumbnailUrl = "~/images/projects/farm-ecommerce-api.png"
-        },
-
-        new Project
-        {
-            Id = "virtubooks",
-            Title = "Virtubooks",
-            Description = "Virtubooks provides a virtual notebook experience to make digital note-taking and writing more engaging and interactive. A small personal project that I developed to practice my skills in WordPress.",
-            Link = null, // "https://virtubooks.online"
-            GithubLink = "https://github.com/EricCatayas/VirtubooksWP",
-            ImageUrl = "~/images/projects/virtubooks.png",
-            ThumbnailUrl = "~/images/projects/virtubooks.png"
         },
 
         new Project
