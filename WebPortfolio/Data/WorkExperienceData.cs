@@ -72,7 +72,7 @@ namespace WebPortfolio.Data
             {
                 Id = "mdv-intern",
                 Title = "Full Stack Development Intern (500 hrs.)",
-                Date = "June 2024 - October 2024",
+                Date = "June 2024 - August 2024",
                 Company = new Company
                 {
                     Name = "My Dream Visa LLC",
