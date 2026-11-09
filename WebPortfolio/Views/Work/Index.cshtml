@@ -1,4 +1,7 @@
 ﻿@model IEnumerable<WebPortfolio.Models.WorkExperience>
+@{
+    var isFirst = true;
+}
 <!-- Start Hero Section -->
 <section class="filled_bg 100_bg position-relative" style="background-image: url('@Url.Content("~/images/bg/header_bg_12.png")');">
     <section class="hero style_3 center text-center">
@@ -17,16 +20,17 @@
     <!-- Start Work Timeline Section -->
     <section class="container px-2 mx-auto">
         <div class="timeline">
-            @for (int i = 0; i < Model.Count(); i++)
+            @foreach (var experience in Model.Reverse())
             {
-                var experience = Model.ElementAt(i);
-                bool isOpen = i == 0;
                 var timelineItemVM = new WebPortfolio.ViewModels.TimelineItemVM
                 {
                     Experience = experience,
-                    IsActive = isOpen
+                    IsActive = isFirst
                 };
-                <partial name="_TimelineItem" model="timelineItemVM" />
+
+                <partial name="_TimelineItem" model="@timelineItemVM" />
+
+                isFirst = false;
             }
         </div>
         <div class="height_40 height_lg_20"></div>
