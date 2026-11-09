@@ -83,6 +83,11 @@ summary {
 }
 
 
+.timeline-header a {
+    display: inline-block;
+}
+
+
 .timeline-header strong {
     display: block;
     margin-top: 8px;
