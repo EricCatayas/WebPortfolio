@@ -5,7 +5,43 @@ namespace WebPortfolio.Data
     public static class WorkExperienceData
     {
         public static readonly List<WorkExperience> Experiences = new List<WorkExperience>
-        {                        
+        {
+            new WorkExperience
+            {
+                Id = "brice-holding-llc",
+                Title = "Frontend Developer Intern",
+                Date = "July 2026 - November 2026",
+                Company = new Company
+                {
+                    Name = "Brice Holding LLC",
+                    Location = "Sheridan, Wyoming, USA",
+                    Link = "https://ngnair.com/"
+                },
+                Type = "Remote",
+                ImageUrl = "~/images/work/payments-ngnair-4x3.png",
+                Description = "Worked on Payments NGnair, a B2B payments platform that brings onboarding, operations, and software integrations together for ISOs, ISVs, and banks. Contributed across 4 service domains, building frontend experiences and supporting integrations and APIs in a microservice platform.",
+                Contributions = new List<string>
+                {
+                    "Developed RESTful API endpoints for managing application webhook subscriptions using NestJS, GraphQL, and SOFA.",
+                    "Integrated QuickBooks Online with the Marketplace platform, enabling merchants to connect their accounting accounts and automatically synchronize eligible payment activity.",
+                    "Standardized frontend styling across 8 microfrontend domains using semantic Tailwind CSS tokens and configured ESLint rules to enforce consistent styling conventions."
+                },
+                Technologies = new List<string>
+                {
+                    "Next.Js",
+                    "Fastify",
+                    "GraphQL",
+                    "Apollo Client",
+                    "Apollo Supergraph",
+                    "Prisma",
+                    "SQLite",
+                    "Node.Js",
+                    "Tailwind CSS",
+                    "TypeScript",
+                    "Linear"
+                }
+            },
+
             new WorkExperience
             {
                 Id = "efficientrix-intern",
@@ -64,7 +100,8 @@ namespace WebPortfolio.Data
                     "HTML",
                     "CSS",
                     "JavaScript",
-                    "TypeScript"
+                    "TypeScript",
+                    "Jira"
                 }
             },
 
@@ -98,7 +135,8 @@ namespace WebPortfolio.Data
                     "HTML",
                     "CSS",
                     "JavaScript",
-                    "TypeScript"
+                    "TypeScript",
+                    "Jira"
                 }
             },
         };
