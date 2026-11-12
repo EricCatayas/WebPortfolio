@@ -13,7 +13,7 @@ namespace WebPortfolio.Data
                 Date = "July 2026 - November 2026",
                 Company = new Company
                 {
-                    Name = "Brice Holding LLC",
+                    Name = "Payments NGnair",
                     Location = "Sheridan, Wyoming, USA",
                     Link = "https://ngnair.com/"
                 },
@@ -24,7 +24,7 @@ namespace WebPortfolio.Data
                 {
                     "Developed RESTful API endpoints for managing application webhook subscriptions using NestJS, GraphQL, and SOFA.",
                     "Integrated QuickBooks Online with the Marketplace platform, enabling merchants to connect their accounting accounts and automatically synchronize eligible payment activity.",
-                    "Standardized frontend styling across 8 microfrontend domains using semantic Tailwind CSS tokens and configured ESLint rules to enforce consistent styling conventions."
+                    "Standardized frontend styling across 8 microfrontend domains using Tailwind CSS and ESLint to enforce UI consistency."
                 },
                 Technologies = new List<string>
                 {
